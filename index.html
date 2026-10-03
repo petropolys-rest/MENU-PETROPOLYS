@@ -1,323 +1,1036 @@
 <!doctype html>
-<html lang="es-MX">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Café Petropolys | Menú digital</title>
-  <meta name="description" content="Menú digital de Café Petropolys. Consulta el menú, ubicación, horario y WhatsApp del restaurante en un solo lugar." />
-  <meta name="theme-color" content="#205246" />
-  <meta property="og:title" content="Café Petropolys | Menú digital" />
-  <meta property="og:description" content="Consulta el menú digital de Café Petropolys, abierto 24/7 en el Centro de Mérida." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/logo-oficial.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Café Petropolys",
-    "image": "assets/logo-oficial.png",
-    "telephone": ["+52 999 224 9678", "+52 999 546 3816"],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "C. 70 530, Centro",
-      "addressLocality": "Mérida",
-      "addressRegion": "Yucatán",
-      "postalCode": "97000",
-      "addressCountry": "MX"
-    },
-    "openingHours": "Mo-Su 00:00-23:59",
-    "servesCuisine": ["Mexicana", "Yucateca"]
-  }
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#menu">Ir al menú</a>
 
-  <header class="site-header">
-    <div class="shell header-row">
-      <a class="brand" href="#inicio" aria-label="Café Petropolys, ir al inicio">
-        <img src="assets/logo-oficial.png" alt="Logo oficial de Café Petropolys" />
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Café Petropolys | Restaurante 24/7 en el centro de Mérida</title>
+    <meta
+      content="Mérida sabe mejor en Café Petropolys. Desayunos, cocina mexicana y yucateca las 24 horas. Consulta el menú, pide por WhatsApp y encuentra cómo llegar."
+      name="description"
+    />
+    <meta content="index, follow, max-image-preview:large" name="robots" />
+    <meta content="#FF800D" name="theme-color" />
+    <meta content="website" property="og:type" />
+    <meta content="es_MX" property="og:locale" />
+    <meta content="Café Petropolys" property="og:site_name" />
+    <meta
+      content="Café Petropolys | Restaurante 24/7 en el centro de Mérida"
+      property="og:title"
+    />
+    <meta
+      content="Mérida sabe mejor en Café Petropolys. Desayunos, cocina mexicana y yucateca las 24 horas. Consulta el menú, pide por WhatsApp y encuentra cómo llegar."
+      property="og:description"
+    />
+    <meta
+      content="assets/fachada-principal-completa.webp"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="Café Petropolys en el centro de Mérida"
+      property="og:image:alt"
+    />
+    <meta content="1600" property="og:image:width" />
+    <meta content="900" property="og:image:height" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="styles.css" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Café Petropolys",
+        "image": "assets/fachada-principal-completa.webp",
+        "telephone": ["+52 999 224 9678", "+52 999 546 3816"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "C. 70 530, Centro",
+          "addressLocality": "Mérida",
+          "addressRegion": "Yucatán",
+          "postalCode": "97000",
+          "addressCountry": "MX"
+        },
+        "openingHours": "Mo-Su 00:00-23:59",
+        "servesCuisine": ["Mexicana", "Yucateca"],
+        "hasMenu": "#menu",
+        "sameAs": [
+          "https://www.tiktok.com/@petropolys.restau?_r=1&_t=ZS-9A48TlDZdYN",
+          "https://www.instagram.com/petropolys_oficial?stkn=MXp4YngxcXlwNXc=",
+          "https://www.facebook.com/share/19cZ4cFaQ9/"
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 20.962226,
+          "longitude": -89.6306792
+        }
+      }
+    </script>
+    <link href="assets/logo-oficial.webp" rel="icon" type="image/webp" />
+  </head>
+  <body>
+    <a class="skip-link" href="#inicio">Ir al contenido</a>
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a
+          aria-label="Café Petropolys, ir al inicio"
+          class="brand"
+          href="#inicio"
+        >
+          <img
+            alt="Logo de Café Petropolys"
+            decoding="async"
+            height="384"
+            loading="lazy"
+            src="assets/logo-oficial.webp"
+            width="384"
+          />
+          <span class="brand-name"
+            >CAFÉ <b>PETROPOLYS</b><small>MÉRIDA, YUCATÁN</small></span
+          ></a
+        >
+        <button
+          aria-controls="topNav"
+          aria-expanded="false"
+          class="menu-toggle"
+          type="button"
+        >
+          <span aria-hidden="true" class="hamburger"><i></i><i></i><i></i></span
+          ><span class="sr-only">Abrir navegación</span>
+        </button>
+        <nav aria-label="Navegación principal" class="top-nav" id="topNav">
+          <a href="#destacados">Galería</a>
+          <a href="#menu">Menú</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#resenas">Reseñas</a>
+          <a href="#ubicacion">Visítanos</a>
+          <a
+            class="nav-order"
+            data-order-dynamic=""
+            href="https://wa.me/529992249678?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Caf%C3%A9%20Petropolys.%20%F0%9F%8D%BD%EF%B8%8F"
+            rel="noopener"
+            target="_blank"
+            >Pedir ahora</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="hero" id="inicio">
+        <img
+          alt="Fachada de Café Petropolys en el centro de Mérida al atardecer"
+          class="hero-photo"
+          fetchpriority="high"
+          height="900"
+          src="assets/fachada-principal-completa.webp"
+          width="1600"
+        />
+        <div class="hero-overlay"></div>
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow hero-eyebrow">
+              EN EL CORAZÓN DE MÉRIDA · ABIERTO 24/7
+            </p>
+            <h1>Mérida sabe mejor<br />en <em>Petropolys.</em></h1>
+            <p class="hero-lead">
+              De un buen desayuno a ese antojo de medianoche. Cocina mexicana y
+              yucateca, porciones generosas y una mesa para ti.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#menu">Ver menú</a>
+              <a
+                class="btn btn-secondary hero-wa"
+                data-order-dynamic=""
+                href="https://wa.me/529992249678?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Caf%C3%A9%20Petropolys.%20%F0%9F%8D%BD%EF%B8%8F"
+                rel="noopener"
+                target="_blank"
+                >Ordenar por WhatsApp</a
+              >
+            </div>
+          </div>
+          <aside class="hero-info-card">
+            <div class="open-indicator">
+              <span></span> SIEMPRE HAY UNA MESA PARA TI
+            </div>
+            <div class="hero-facts">
+              <h2>24/7<small>Abierto todos los días</small></h2>
+              <p>Centro de Mérida<small>C. 70 530 · Yucatán</small></p>
+            </div>
+            <a
+              href="https://www.google.com/maps/place/Caf%C3%A9+Petropolys/@20.9622261,-89.6309135,77m/data=!3m1!1e3!4m6!3m5!1s0x8f5673da09dd6561:0x90449464ea4cafcc!8m2!3d20.962226!4d-89.6306792!16s%2Fg%2F1q69pl37g?entry=ttu"
+              rel="noopener"
+              target="_blank"
+              >Cómo llegar <span aria-hidden="true">↗</span></a
+            >
+          </aside>
+        </div>
+        <div class="hero-bottom shell">
+          <span>DESAYUNOS · COCINA MEXICANA · SABOR YUCATECO</span
+          ><a aria-label="Descubrir nuestros platillos" href="#destacados"
+            >DESCUBRE EL SABOR <span aria-hidden="true">↓</span></a
+          >
+        </div>
+      </section>
+      <section class="section gallery-section shell" id="destacados">
+        <div class="section-heading section-heading--platillos">
+          <h2>PLATILLOS</h2>
+        </div>
+        <div aria-label="Galería de platillos destacados" class="food-mosaic">
+          <button
+            aria-label="Ampliar fotografía de platillo 1"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-fajitas-res.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Fajitas de res servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-fajitas-res.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 2"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-huevos-hotcakes.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Huevos con hotcakes servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-huevos-hotcakes.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 3"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-sopa-lima.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Sopa de lima servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-sopa-lima.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 4"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-arrachera-verduras.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Arrachera con verduras servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-arrachera-verduras.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 5"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-hamburguesa-papas.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Hamburguesa con papas servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-hamburguesa-papas.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 6"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-fajitas-espagueti.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Fajitas con espagueti servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-fajitas-espagueti.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 7"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-pollo-salsa-verde.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Pollo en salsa verde servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-pollo-salsa-verde.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 8"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-pollo-crujiente.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Pollo crujiente servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-pollo-crujiente.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+        </div>
+        <div class="gallery-invitation">
+          <div>
+            <h3>¿Ya sabes qué se te antoja?</h3>
+            <p>
+              Cuéntanos que vienes de nuestra
+              <strong>página web o redes sociales</strong> y disfruta un
+              <strong>postre de cortesía.</strong>
+            </p>
+          </div>
+          <a class="btn btn-primary" href="#menu"
+            >Ver menú <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="menu-section" id="menu">
+        <div class="shell">
+          <div class="section-heading section-heading--menu">
+            <p class="eyebrow">DE LA PRIMERA TAZA AL ÚLTIMO ANTOJO</p>
+            <h2>NUESTRO MENÚ</h2>
+            <div class="heading-bottom">
+              <p>
+                Encuentra tu favorito. Hay algo rico para cada momento del día.
+              </p>
+              <span>6 CATEGORÍAS <span aria-hidden="true">↙</span></span>
+            </div>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-item">
+              <button
+                aria-label="Abrir menú de platos fuertes"
+                data-gallery="menu"
+                data-open="assets/menu-fuertes.jpg"
+                data-title="Platos fuertes"
+                type="button"
+              >
+                <img
+                  alt="Menú de platos fuertes"
+                  decoding="async"
+                  height="760"
+                  loading="lazy"
+                  src="assets/menu-fuertes.webp"
+                  width="587"
+                />
+              </button>
+              <div>
+                <span>01</span>
+                <h3>Platos fuertes</h3>
+                <button
+                  aria-label="Abrir menú de platos fuertes"
+                  class="menu-link"
+                  data-gallery="menu"
+                  data-open="assets/menu-fuertes.jpg"
+                  data-title="Platos fuertes"
+                  type="button"
+                >
+                  Ver menú →
+                </button>
+              </div>
+            </article>
+            <article class="menu-item">
+              <button
+                aria-label="Abrir menú de desayunos"
+                data-gallery="menu"
+                data-open="assets/menu-desayunos-actualizado.png"
+                data-title="Desayunos"
+                type="button"
+              >
+                <img
+                  alt="Menú de desayunos"
+                  decoding="async"
+                  height="760"
+                  loading="lazy"
+                  src="assets/menu-desayunos-actualizado.webp"
+                  width="587"
+                />
+              </button>
+              <div>
+                <span>02</span>
+                <h3>Desayunos</h3>
+                <button
+                  aria-label="Abrir menú de desayunos"
+                  class="menu-link"
+                  data-gallery="menu"
+                  data-open="assets/menu-desayunos-actualizado.png"
+                  data-title="Desayunos"
+                  type="button"
+                >
+                  Ver menú →
+                </button>
+              </div>
+            </article>
+            <article class="menu-item">
+              <button
+                aria-label="Abrir menú de bebidas"
+                data-gallery="menu"
+                data-open="assets/menu-bebidas.jpg"
+                data-title="Bebidas"
+                type="button"
+              >
+                <img
+                  alt="Menú de bebidas"
+                  decoding="async"
+                  height="760"
+                  loading="lazy"
+                  src="assets/menu-bebidas.webp"
+                  width="587"
+                />
+              </button>
+              <div>
+                <span>03</span>
+                <h3>Bebidas</h3>
+                <button
+                  aria-label="Abrir menú de bebidas"
+                  class="menu-link"
+                  data-gallery="menu"
+                  data-open="assets/menu-bebidas.jpg"
+                  data-title="Bebidas"
+                  type="button"
+                >
+                  Ver menú →
+                </button>
+              </div>
+            </article>
+            <article class="menu-item">
+              <button
+                aria-label="Abrir menú de paquetes"
+                data-gallery="menu"
+                data-open="assets/menu-paquetes.jpg"
+                data-title="Paquetes"
+                type="button"
+              >
+                <img
+                  alt="Menú de paquetes"
+                  decoding="async"
+                  height="760"
+                  loading="lazy"
+                  src="assets/menu-paquetes.webp"
+                  width="587"
+                />
+              </button>
+              <div>
+                <span>04</span>
+                <h3>Paquetes</h3>
+                <button
+                  aria-label="Abrir menú de paquetes"
+                  class="menu-link"
+                  data-gallery="menu"
+                  data-open="assets/menu-paquetes.jpg"
+                  data-title="Paquetes"
+                  type="button"
+                >
+                  Ver menú →
+                </button>
+              </div>
+            </article>
+            <article class="menu-item">
+              <button
+                aria-label="Abrir menú de antojitos"
+                data-gallery="menu"
+                data-open="assets/menu-antojitos.jpg"
+                data-title="Antojitos"
+                type="button"
+              >
+                <img
+                  alt="Menú de antojitos"
+                  decoding="async"
+                  height="760"
+                  loading="lazy"
+                  src="assets/menu-antojitos.webp"
+                  width="587"
+                />
+              </button>
+              <div>
+                <span>05</span>
+                <h3>Antojitos</h3>
+                <button
+                  aria-label="Abrir menú de antojitos"
+                  class="menu-link"
+                  data-gallery="menu"
+                  data-open="assets/menu-antojitos.jpg"
+                  data-title="Antojitos"
+                  type="button"
+                >
+                  Ver menú →
+                </button>
+              </div>
+            </article>
+            <article class="menu-item">
+              <button
+                aria-label="Abrir menú de platillos diarios"
+                data-gallery="menu"
+                data-open="assets/menu-diarios.jpg"
+                data-title="Platillos diarios"
+                type="button"
+              >
+                <img
+                  alt="Menú de platillos diarios"
+                  decoding="async"
+                  height="760"
+                  loading="lazy"
+                  src="assets/menu-diarios.webp"
+                  width="587"
+                />
+              </button>
+              <div>
+                <span>06</span>
+                <h3>Platillos diarios</h3>
+                <button
+                  aria-label="Abrir menú de platillos diarios"
+                  class="menu-link"
+                  data-gallery="menu"
+                  data-open="assets/menu-diarios.jpg"
+                  data-title="Platillos diarios"
+                  type="button"
+                >
+                  Ver menú →
+                </button>
+              </div>
+            </article>
+          </div>
+          <aside aria-labelledby="freshDrinksTitle" class="fresh-drinks">
+            <div class="fresh-drinks-title">
+              <p class="eyebrow">100% NATURALES</p>
+              <h3 id="freshDrinksTitle">Aguas frescas<br />de sabor.</h3>
+            </div>
+            <div class="fresh-drinks-flavors">
+              <p>El complemento fresco para tu comida.</p>
+              <ul aria-label="Sabores de aguas frescas">
+                <li>Jamaica</li>
+                <li>Horchata</li>
+                <li>Tamarindo</li>
+                <li>Limón con chía</li>
+                <li>Pepino</li>
+              </ul>
+              <p class="seasonal-flavor">
+                <strong>Pitaya</strong> <span>por temporada</span>
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section class="about-section" id="nosotros">
+        <div class="shell about-premium-grid">
+          <div class="about-premium-copy">
+            <p class="about-premium-kicker">NOSOTROS</p>
+            <h2>Sabor de Mérida,<br /><em>atención que se recuerda.</em></h2>
+            <p class="about-premium-text">
+              En Café Petropolys queremos que cada visita se sienta cercana,
+              rica y auténtica. Reunimos desayunos, cocina mexicana y yucateca,
+              platillos abundantes y una atención amable en una ubicación
+              práctica del centro de Mérida.
+            </p>
+            <p class="about-premium-text">
+              Un lugar para desayunar temprano, comer bien y volver cuando se te
+              antoje.
+            </p>
+            <a class="about-premium-cta" href="#menu"
+              >CONOCE NUESTRO MENÚ <span>→</span></a
+            >
+          </div>
+          <div
+            aria-label="Café Petropolys y algunos de sus platillos"
+            class="about-collage"
+          >
+            <figure class="about-collage__item about-collage__item--a">
+              <img
+                alt="Fachada de Café Petropolys"
+                decoding="async"
+                height="900"
+                loading="lazy"
+                src="assets/fachada-principal-completa.webp"
+                width="1600"
+              />
+            </figure>
+            <figure class="about-collage__item about-collage__item--b">
+              <img
+                alt="Desayuno servido en Café Petropolys"
+                decoding="async"
+                height="760"
+                loading="lazy"
+                src="assets/platillo-huevos-hotcakes.webp"
+                width="427"
+              />
+            </figure>
+            <figure class="about-collage__item about-collage__item--c">
+              <img
+                alt="Platillo servido en Café Petropolys"
+                decoding="async"
+                height="760"
+                loading="lazy"
+                src="assets/platillo-sopa-lima.webp"
+                width="427"
+              />
+            </figure>
+            <figure class="about-collage__item about-collage__item--d">
+              <img
+                alt="Platillo servido en Café Petropolys"
+                decoding="async"
+                height="760"
+                loading="lazy"
+                src="assets/platillo-arrachera-verduras.webp"
+                width="427"
+              />
+            </figure>
+            <span class="about-collage__seal"
+              >Sabor de casa.<br /><b>A cualquier hora.</b></span
+            >
+          </div>
+        </div>
+      </section>
+      <section class="order-section" id="pedidos">
+        <div class="shell order-grid">
+          <div class="order-copy">
+            <p class="eyebrow">PEDIDOS</p>
+            <h2>Tu pedido, directo por WhatsApp.</h2>
+            <p>
+              De día o de noche, estamos para atenderte. Elige tu turno o usa
+              “Pedir ahora” para contactar al equipo disponible.
+            </p>
+            <div class="order-live">
+              <span></span
+              ><b aria-live="polite" id="orderNowText"
+                >Consultando horario de pedidos…</b
+              >
+            </div>
+          </div>
+          <div class="order-options">
+            <article class="order-card" id="orderDay">
+              <span class="shift-status"></span>
+              <small>DÍA · 6:00 AM – 6:00 PM</small>
+              <strong>999 224 9678</strong>
+              <a
+                href="https://wa.me/529992249678?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Caf%C3%A9%20Petropolys.%20%F0%9F%8D%BD%EF%B8%8F"
+                rel="noopener"
+                target="_blank"
+                >Ordenar ahora →</a
+              >
+            </article>
+            <article class="order-card order-card--yellow" id="orderNight">
+              <span class="shift-status"></span>
+              <small>NOCHE · 6:00 PM – 6:00 AM</small>
+              <strong>999 546 3816</strong>
+              <a
+                href="https://wa.me/529995463816?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Caf%C3%A9%20Petropolys.%20%F0%9F%8D%BD%EF%B8%8F"
+                rel="noopener"
+                target="_blank"
+                >Ordenar ahora →</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="reviews-section reviews-section--coffee" id="resenas">
+        <div class="shell reviews-premium-head">
+          <p class="reviews-premium-kicker">RESEÑAS</p>
+          <h2>OPINIONES DE<br /><span>NUESTROS CLIENTES</span></h2>
+          <p>Lo que más disfrutamos: saber que quieres volver.</p>
+          <a
+            class="reviews-google-link"
+            href="https://www.google.com/maps/place/Caf%C3%A9+Petropolys/@20.9622261,-89.6309135,77m/data=!3m1!1e3!4m6!3m5!1s0x8f5673da09dd6561:0x90449464ea4cafcc!8m2!3d20.962226!4d-89.6306792!16s%2Fg%2F1q69pl37g?entry=ttu"
+            rel="noopener"
+            target="_blank"
+            >Ver más en Google Maps ↗</a
+          >
+        </div>
+        <div class="reviews-premium-grid shell">
+          <article class="review-premium-card">
+            <div aria-label="5 de 5 estrellas" class="review-premium-stars">
+              ★★★★★
+            </div>
+            <span class="review-premium-date">HACE 2 DÍAS</span>
+            <h3>Excelente servicio</h3>
+            <p>
+              Excelente servicio, la comida y los postres muy ricos, recomiendo
+              el platillo poc chuc. Muy bien ubicados y precios accesibles.
+              Personal muy amable.
+            </p>
+            <strong>MEX Berserk :v</strong>
+          </article>
+          <article class="review-premium-card">
+            <div aria-label="5 de 5 estrellas" class="review-premium-stars">
+              ★★★★★
+            </div>
+            <span class="review-premium-date">HACE 2 DÍAS</span>
+            <h3>Muy buen servicio</h3>
+            <p>
+              Muy buen servicio, la comida está muy rica y tienen una amplia
+              variedad de platillos a buen precio.
+            </p>
+            <strong>Alberto Correa</strong>
+          </article>
+          <article class="review-premium-card">
+            <div aria-label="5 de 5 estrellas" class="review-premium-stars">
+              ★★★★★
+            </div>
+            <span class="review-premium-date">HACE 3 DÍAS</span>
+            <h3>Todo rico</h3>
+            <p>Todo rico.</p>
+            <strong>claudio xolocotzi</strong>
+          </article>
+          <article class="review-premium-card">
+            <div aria-label="5 de 5 estrellas" class="review-premium-stars">
+              ★★★★★
+            </div>
+            <span class="review-premium-date">HACE 3 DÍAS</span>
+            <h3>Excelente servicio</h3>
+            <p>Excelente servicio.</p>
+            <strong>Maximiliano Sánchez</strong>
+          </article>
+          <article class="review-premium-card">
+            <div aria-label="5 de 5 estrellas" class="review-premium-stars">
+              ★★★★★
+            </div>
+            <span class="review-premium-date">HACE 3 DÍAS</span>
+            <h3>Rico y rápido</h3>
+            <p>
+              Cumplen con la cortesía, rico el huevo con jamón. Tiempo de espera
+              menor a 10 minutos.
+            </p>
+            <strong>Miguel Pleytes</strong>
+          </article>
+        </div>
+        <p class="review-snapshot shell">
+          Reseñas incluidas en nuestro sitio. La antigüedad corresponde al
+          momento de su recopilación.
+        </p>
+      </section>
+      <section class="visit-section" id="ubicacion">
+        <div class="shell visit-grid">
+          <div class="visit-copy">
+            <p class="eyebrow">VISÍTANOS</p>
+            <h2>Nos vemos en Petropolys.</h2>
+            <address>C. 70 530, Centro, 97000 Mérida, Yucatán.</address>
+            <div class="visit-actions">
+              <a
+                class="btn btn-dark"
+                href="https://www.google.com/maps/place/Caf%C3%A9+Petropolys/@20.9622261,-89.6309135,77m/data=!3m1!1e3!4m6!3m5!1s0x8f5673da09dd6561:0x90449464ea4cafcc!8m2!3d20.962226!4d-89.6306792!16s%2Fg%2F1q69pl37g?entry=ttu"
+                rel="noopener"
+                target="_blank"
+                >Abrir en Maps</a
+              >
+              <a
+                class="btn btn-light"
+                data-order-dynamic=""
+                href="https://wa.me/529992249678?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Caf%C3%A9%20Petropolys.%20%F0%9F%8D%BD%EF%B8%8F"
+                rel="noopener"
+                target="_blank"
+                >WhatsApp</a
+              >
+            </div>
+            <div class="social-links">
+              <a
+                aria-label="TikTok de Café Petropolys"
+                href="https://www.tiktok.com/@petropolys.restau?_r=1&amp;_t=ZS-9A48TlDZdYN"
+                rel="noopener"
+                target="_blank"
+              >
+                <span aria-hidden="true" class="social-icon"
+                  ><svg viewbox="0 0 24 24">
+                    <path
+                      d="M15.6 3c.3 1.9 1.4 3.5 3.2 4.3.9.4 1.8.6 2.8.6v3a8.3 8.3 0 0 1-4.5-1.3v5.7a6.3 6.3 0 1 1-6.3-6.3c.4 0 .7 0 1 .1V12a3.6 3.6 0 1 0 2.8 3.4V3h3Z"
+                      fill="currentColor"
+                    ></path></svg
+                ></span>
+                <span>TikTok</span>
+              </a>
+              <a
+                aria-label="Instagram de Café Petropolys"
+                href="https://www.instagram.com/petropolys_oficial?stkn=MXp4YngxcXlwNXc="
+                rel="noopener"
+                target="_blank"
+              >
+                <span aria-hidden="true" class="social-icon"
+                  ><svg viewbox="0 0 24 24">
+                    <path
+                      d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
+                      fill="currentColor"
+                    ></path></svg
+                ></span>
+                <span>Instagram</span>
+              </a>
+              <a
+                aria-label="Facebook de Café Petropolys"
+                href="https://www.facebook.com/share/19cZ4cFaQ9/"
+                rel="noopener"
+                target="_blank"
+              >
+                <span aria-hidden="true" class="social-icon"
+                  ><svg viewbox="0 0 24 24">
+                    <path
+                      d="M13.5 21.5v-8h2.7l.4-3h-3.1V8.6c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4v1.8H7.3v3h2.8v8h3.4Z"
+                      fill="currentColor"
+                    ></path></svg
+                ></span>
+                <span>Facebook</span>
+              </a>
+            </div>
+          </div>
+          <div class="visit-map">
+            <iframe
+              allowfullscreen=""
+              height="480"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Caf%C3%A9%20Petropolys%2C%20C.%2070%20530%2C%20Centro%2C%20M%C3%A9rida%2C%20Yucat%C3%A1n&amp;ll=20.962226,-89.6306792&amp;z=17&amp;output=embed"
+              title="Ubicación de Café Petropolys en Google Maps"
+              width="600"
+            ></iframe>
+            <div class="visit-map-caption">
+              <span
+                ><strong>Café Petropolys</strong
+                ><small>Centro de Mérida · Abierto 24/7</small></span
+              ><a
+                aria-label="Abrir ubicación de Café Petropolys en Google Maps"
+                href="https://www.google.com/maps/place/Caf%C3%A9+Petropolys/@20.9622261,-89.6309135,77m/data=!3m1!1e3!4m6!3m5!1s0x8f5673da09dd6561:0x90449464ea4cafcc!8m2!3d20.962226!4d-89.6306792!16s%2Fg%2F1q69pl37g?entry=ttu"
+                rel="noopener"
+                target="_blank"
+                >Abrir mapa ↗</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="parking-feature shell">
+          <div class="parking-guide">
+            <button
+              aria-label="Ampliar: Guía de estacionamiento"
+              class="parking-photo"
+              data-gallery="parking"
+              data-open="assets/estacionamiento-guia.png"
+              data-title="Guía de estacionamiento"
+              type="button"
+            >
+              <img
+                alt="Guía con flechas que señalan el Hotel Tierra del Sol y el estacionamiento"
+                decoding="async"
+                height="1103"
+                loading="lazy"
+                src="assets/estacionamiento-guia.webp"
+                width="932"
+              /><span class="parking-photo-caption"
+                ><strong>Guía de estacionamiento</strong
+                ><span>Ampliar ↗</span></span
+              >
+            </button>
+          </div>
+          <div class="parking-feature-copy">
+            <p class="eyebrow">UN BENEFICIO PARA TU VISITA</p>
+            <h3>2 horas de estacionamiento <em>de cortesía.</em></h3>
+            <p>
+              Con tu consumo en Café Petropolys, disfruta de
+              <strong>2 horas de estacionamiento de cortesía</strong> frente al
+              <strong>Hotel Tierra Del Sol</strong>, a tan solo
+              <strong>3 minutos del restaurante.</strong>
+            </p>
+            <div
+              aria-label="Fotos de referencia del estacionamiento"
+              class="parking-details-gallery"
+            >
+              <button
+                aria-label="Ampliar: Entrada del estacionamiento"
+                class="parking-photo"
+                data-gallery="parking"
+                data-open="assets/estacionamiento-entrada.png"
+                data-title="Entrada del estacionamiento"
+                type="button"
+              >
+                <img
+                  alt="Entrada del estacionamiento con muro azul y letrero de estacionamiento"
+                  decoding="async"
+                  height="563"
+                  loading="lazy"
+                  src="assets/estacionamiento-entrada.webp"
+                  width="1000"
+                /><span class="parking-photo-caption"
+                  ><strong>Entrada del estacionamiento</strong
+                  ><span>Ampliar ↗</span></span
+                ></button
+              ><button
+                aria-label="Ampliar: Referencias de la calle"
+                class="parking-photo"
+                data-gallery="parking"
+                data-open="assets/estacionamiento-calle.png"
+                data-title="Referencias de la calle"
+                type="button"
+              >
+                <img
+                  alt="Vista de la calle con fachadas coloridas para reconocer la zona del estacionamiento"
+                  decoding="async"
+                  height="563"
+                  loading="lazy"
+                  src="assets/estacionamiento-calle.webp"
+                  width="1000"
+                /><span class="parking-photo-caption"
+                  ><strong>Referencias de la calle</strong
+                  ><span>Ampliar ↗</span></span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <img
+          alt=""
+          aria-hidden="true"
+          decoding="async"
+          height="384"
+          loading="lazy"
+          src="assets/logo-oficial.webp"
+          width="384"
+        />
         <div>
           <strong>Café Petropolys</strong>
-          <span>Centro de Mérida · Abierto 24/7</span>
+          <p>Sabor de Mérida. A cualquier hora.</p>
         </div>
-      </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="topNav">Menú</button>
-
-      <nav class="top-nav" id="topNav" aria-label="Navegación principal">
-        <a href="#menu">Menú</a>
-        <a href="#platillos-actuales">Platillos</a>
-        <a href="#redes">Redes</a>
-        <a href="#pedidos">Pedidos</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a class="nav-cta" data-order-dynamic href="https://wa.me/529992249678?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Caf%C3%A9%20Petropolys.%20%F0%9F%8D%BD%EF%B8%8F" target="_blank" rel="noopener">Ordenar</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero shell" id="inicio">
-      <div class="hero-copy">
-        <p class="eyebrow">MENÚ DIGITAL · CAFÉ PETROPOLYS</p>
-        <h1>Conoce el menú de <span>Café Petropolys</span>.</h1>
-        <p class="hero-lead">Consulta nuestras páginas del menú en foto, descubre platillos actuales y contáctanos por WhatsApp desde una sola página.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#menu">Explorar menú</a>
-          <a class="btn btn-secondary" href="https://www.google.com/maps/place/Caf%C3%A9+Petropolys/@20.962252,-89.6309797,91m/data=!3m1!1e3!4m14!1m7!3m6!1s0x8f56732ad4d98055:0xb05ff9cbe6b49810!2sPetropolys+Sucursal!8m2!3d20.9631494!4d-89.6304747!16s%2Fg%2F11rcp_9w6w!3m5!1s0x8f5673da09dd6561:0x90449464ea4cafcc!8m2!3d20.962226!4d-89.6306792!16s%2Fg%2F1q69pl37g?entry=ttu&g_ep=EgoyMDI2MDkyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Cómo llegar</a>
-        </div>
-
-        <div class="hero-highlights">
-          <article><span>Horario</span><strong>24/7</strong></article>
-          <article><span>Ubicación</span><strong>Centro de Mérida</strong></article>
-          <article><span>Pedidos</span><strong>WhatsApp</strong></article>
-        </div>
+        <a href="#inicio">Volver arriba ↑</a>
       </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <div class="arch-card arch-card--main">
-          <img src="assets/fachada-principal-completa.png" alt="" />
-        </div>
-      </div>
-    </section>
-
-    <section class="section shell" id="menu">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">MENÚ EN FOTO</p>
-          <h2>Recorre cada página como si tuvieras el menú en tus manos</h2>
-        </div>
-        <p class="section-text">Actualizamos las páginas del menú con fotos de mejor calidad para que se vean más limpias, completas y legibles. Toca cualquier imagen para ampliarla.</p>
-      </div>
-      <div class="chips" aria-label="Atajos del menú">
-        <a href="#p1">Platos fuertes</a>
-        <a href="#p2">Desayunos</a>
-        <a href="#p3">Bebidas</a>
-        <a href="#p4">Paquetes comida</a>
-        <a href="#p5">Antojitos</a>
-        <a href="#p6">Platillos diarios</a>
-      </div>
-    </section>
-
-    <section class="shell menu-grid" aria-label="Galería del menú">
-      <article class="menu-card" id="p1">
-        <div class="menu-card__copy">
-          <span class="tag">Página 1</span>
-          <h3>Platos fuertes, caldos y especial de domingo</h3>
-          <p>Tampiqueña de arrachera, pechuga rellena, poc chuc, cochinita pibil, sopa de lima y lechón al horno.</p>
-          <button class="text-link" data-open="assets/menu-fuertes.jpg" data-title="Platos fuertes, caldos y especial de domingo">Ver en grande</button>
-        </div>
-        <button class="photo-card" data-open="assets/menu-fuertes.jpg" data-title="Platos fuertes, caldos y especial de domingo">
-          <img src="assets/menu-fuertes.jpg" alt="Página del menú con platos fuertes, caldos y especial de domingo" loading="lazy" />
-          <span>Ampliar</span>
+    </footer>
+    <a
+      aria-label="Ordenar por WhatsApp al turno disponible"
+      class="floating-wa"
+      data-order-dynamic=""
+      href="https://wa.me/529992249678?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Caf%C3%A9%20Petropolys.%20%F0%9F%8D%BD%EF%B8%8F"
+      rel="noopener"
+      target="_blank"
+      ><svg aria-hidden="true" viewbox="0 0 24 24">
+        <path
+          d="M20.5 3.5a11.9 11.9 0 0 0-18.7 14L.2 23.8l6.5-1.7a12 12 0 0 0 17.1-10.9c0-2.9-1.2-5.6-3.3-7.7Zm-8.7 18.3a10 10 0 0 1-5.1-1.4l-.4-.2-3.9 1 1-3.8-.3-.4a10 10 0 1 1 8.7 4.8Zm5.5-7.5c-.3-.1-1.8-.9-2.1-1s-.5-.1-.7.2-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-4.1-3.6c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3 2.1 3.2 5.1 4.5c1.9.8 2.6.9 3.5.8.6-.1 1.8-.7 2.1-1.4s.3-1.3.2-1.4-.2-.1-.5-.2Z"
+          fill="currentColor"
+        ></path></svg
+      ><span>Pedir ahora</span></a
+    >
+    <dialog
+      aria-describedby="lightboxHelp"
+      aria-labelledby="lightboxTitle"
+      class="lightbox"
+      id="lightbox"
+    >
+      <div class="lightbox-box">
+        <button aria-label="Cerrar" class="close-lightbox" type="button">
+          ×
         </button>
-      </article>
-
-      <article class="menu-card reverse" id="p2">
-        <div class="menu-card__copy">
-          <span class="tag">Página 2</span>
-          <h3>Paquetes desayuno</h3>
-          <p>Combinado yucateco, chilaquiles, huevos motuleños, club sándwich, huevos al gusto y burro. Todos incluyen café y postre.</p>
-          <button class="text-link" data-open="assets/menu-desayunos-actualizado.png" data-title="Paquetes desayuno">Ver en grande</button>
+        <div class="lightbox-top">
+          <p class="lightbox-title" id="lightboxTitle"></p>
+          <p
+            aria-live="polite"
+            class="lightbox-counter"
+            id="lightboxCounter"
+          ></p>
         </div>
-        <button class="photo-card" data-open="assets/menu-desayunos-actualizado.png" data-title="Paquetes desayuno">
-          <img src="assets/menu-desayunos-actualizado.png" alt="Página del menú con paquetes desayuno" loading="lazy" />
-          <span>Ampliar</span>
-        </button>
-      </article>
-
-      <article class="menu-card" id="p3">
-        <div class="menu-card__copy">
-          <span class="tag">Página 3</span>
-          <h3>Bebidas</h3>
-          <p>Café de olla con crema, americano con leche, capuchino, chocolate caliente, jugo de naranja y aguas frescas.</p>
-          <button class="text-link" data-open="assets/menu-bebidas.jpg" data-title="Bebidas">Ver en grande</button>
-        </div>
-        <button class="photo-card" data-open="assets/menu-bebidas.jpg" data-title="Bebidas">
-          <img src="assets/menu-bebidas.jpg" alt="Página del menú con bebidas" loading="lazy" />
-          <span>Ampliar</span>
-        </button>
-      </article>
-
-      <article class="menu-card reverse" id="p4">
-        <div class="menu-card__copy">
-          <span class="tag">Página 4</span>
-          <h3>Paquetes comidas</h3>
-          <p>Comidas con entrada, plato fuerte, agua fresca y postre, además de combos con hamburguesa, torta cubana y panuchos o tacos.</p>
-          <button class="text-link" data-open="assets/menu-paquetes.jpg" data-title="Paquetes comidas">Ver en grande</button>
-        </div>
-        <button class="photo-card" data-open="assets/menu-paquetes.jpg" data-title="Paquetes comidas">
-          <img src="assets/menu-paquetes.jpg" alt="Página del menú con paquetes de comidas" loading="lazy" />
-          <span>Ampliar</span>
-        </button>
-      </article>
-
-      <article class="menu-card" id="p5">
-        <div class="menu-card__copy">
-          <span class="tag">Página 5</span>
-          <h3>Tortas, tacos, salbutes, panuchos, hamburguesas y postres</h3>
-          <p>Antojitos yucatecos, tortas especiales, hamburguesas, papas fritas, plátanos fritos y postres del día.</p>
-          <button class="text-link" data-open="assets/menu-antojitos.jpg" data-title="Tortas, tacos, salbutes, panuchos, hamburguesas y postres">Ver en grande</button>
-        </div>
-        <button class="photo-card" data-open="assets/menu-antojitos.jpg" data-title="Tortas, tacos, salbutes, panuchos, hamburguesas y postres">
-          <img src="assets/menu-antojitos.jpg" alt="Página del menú con tortas, tacos, salbutes, panuchos, hamburguesas y postres" loading="lazy" />
-          <span>Ampliar</span>
-        </button>
-      </article>
-
-      <article class="menu-card reverse" id="p6">
-        <div class="menu-card__copy">
-          <span class="tag">Página 6</span>
-          <h3>Platillos diarios</h3>
-          <p>Chilaquiles preparados, omelets, quesadillas, tostadas, combinados yucatecos, club sándwich, huevos revueltos y ensalada de frutas.</p>
-          <button class="text-link" data-open="assets/menu-diarios.jpg" data-title="Platillos diarios">Ver en grande</button>
-        </div>
-        <button class="photo-card" data-open="assets/menu-diarios.jpg" data-title="Platillos diarios">
-          <img src="assets/menu-diarios.jpg" alt="Página del menú con platillos diarios" loading="lazy" />
-          <span>Ampliar</span>
-        </button>
-      </article>
-    </section>
-
-    <section class="section shell" id="platillos-actuales">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">GALERÍA</p>
-          <h2>Platillos de Café Petropolys</h2>
-        </div>
-        <p class="section-text">Una selección de fotos actuales del restaurante. Toca cualquier imagen para verla en grande.</p>
-      </div>
-    </section>
-
-    <section class="shell dish-gallery dish-gallery--photos" aria-label="Galería de platillos actuales">
-      <button class="gallery-photo" data-open="assets/platillo-fajitas-res.jpg" data-title="Galería Café Petropolys"><img src="assets/platillo-fajitas-res.jpg" alt="Platillo servido en Café Petropolys" loading="lazy" /><span>Ampliar</span></button>
-      <button class="gallery-photo" data-open="assets/platillo-fajitas-espagueti.jpg" data-title="Galería Café Petropolys"><img src="assets/platillo-fajitas-espagueti.jpg" alt="Platillo servido en Café Petropolys" loading="lazy" /><span>Ampliar</span></button>
-      <button class="gallery-photo" data-open="assets/platillo-huevos-hotcakes.jpg" data-title="Galería Café Petropolys"><img src="assets/platillo-huevos-hotcakes.jpg" alt="Platillo servido en Café Petropolys" loading="lazy" /><span>Ampliar</span></button>
-      <button class="gallery-photo" data-open="assets/platillo-arrachera-verduras.jpg" data-title="Galería Café Petropolys"><img src="assets/platillo-arrachera-verduras.jpg" alt="Platillo servido en Café Petropolys" loading="lazy" /><span>Ampliar</span></button>
-      <button class="gallery-photo" data-open="assets/platillo-hamburguesa-papas.jpg" data-title="Galería Café Petropolys"><img src="assets/platillo-hamburguesa-papas.jpg" alt="Platillo servido en Café Petropolys" loading="lazy" /><span>Ampliar</span></button>
-      <button class="gallery-photo" data-open="assets/platillo-sopa-lima.jpg" data-title="Galería Café Petropolys"><img src="assets/platillo-sopa-lima.jpg" alt="Platillo servido en Café Petropolys" loading="lazy" /><span>Ampliar</span></button>
-      <button class="gallery-photo" data-open="assets/platillo-pollo-salsa-verde.jpg" data-title="Galería Café Petropolys"><img src="assets/platillo-pollo-salsa-verde.jpg" alt="Platillo servido en Café Petropolys" loading="lazy" /><span>Ampliar</span></button>
-      <button class="gallery-photo" data-open="assets/platillo-pollo-crujiente.jpg" data-title="Galería Café Petropolys"><img src="assets/platillo-pollo-crujiente.jpg" alt="Platillo servido en Café Petropolys" loading="lazy" /><span>Ampliar</span></button>
-    </section>
-
-    <section class="order-section shell" id="pedidos">
-      <div class="order-card">
-        <div class="order-intro">
-          <p class="eyebrow">HAZ TU PEDIDO POR WHATSAPP</p>
-          <h2>Un número para cada horario</h2>
-          <p>Te conectamos con el número de pedidos correspondiente según la hora de Mérida. El mensaje ya va listo para enviar.</p>
-          <div class="order-now" id="orderNow" aria-live="polite">
-            <span class="order-now__dot"></span>
-            <span id="orderNowText">Consultando horario de pedidos…</span>
-          </div>
-        </div>
-
-        <div class="order-options" aria-label="Horarios y números para pedidos">
-          <article class="order-option" id="orderDay" data-order-period="day">
-            <div class="order-option__top">
-              <span class="order-icon" aria-hidden="true">☀</span>
-              <span class="order-status">Pedidos de día</span>
+        <div class="lightbox-stage">
+          <button
+            aria-label="Imagen anterior"
+            class="lightbox-nav lightbox-prev"
+            type="button"
+          >
+            ‹
+          </button>
+          <div class="lightbox-frame" id="lightboxFrame">
+            <div class="lightbox-page" id="lightboxPage">
+              <img
+                alt="Vista ampliada"
+                class="lightbox-image"
+                draggable="false"
+                id="lightboxImage"
+              />
             </div>
-            <h3>6:00 AM – 6:00 PM</h3>
-            <a class="order-phone" href="tel:+529992249678">999 224 9678</a>
-            <a class="btn order-btn" href="https://wa.me/529992249678?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Caf%C3%A9%20Petropolys.%20%F0%9F%8D%BD%EF%B8%8F" target="_blank" rel="noopener">Quiero ordenar</a>
-          </article>
-
-          <article class="order-option order-option--night" id="orderNight" data-order-period="night">
-            <div class="order-option__top">
-              <span class="order-icon" aria-hidden="true">☾</span>
-              <span class="order-status">Pedidos de noche</span>
+            <div aria-label="Controles de zoom" class="zoom-controls">
+              <button aria-label="Alejar imagen" id="zoomOut" type="button">
+                −
+              </button>
+              <span id="zoomLevel">100%</span>
+              <button aria-label="Acercar imagen" id="zoomIn" type="button">
+                +
+              </button>
+              <button
+                aria-label="Restablecer zoom"
+                id="zoomReset"
+                type="button"
+              >
+                ↺
+              </button>
             </div>
-            <h3>6:00 PM – 6:00 AM</h3>
-            <a class="order-phone" href="tel:+529995463816">999 546 3816</a>
-            <a class="btn order-btn" href="https://wa.me/529995463816?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Caf%C3%A9%20Petropolys.%20%F0%9F%8D%BD%EF%B8%8F" target="_blank" rel="noopener">Quiero ordenar</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="social-section shell" id="redes">
-      <div class="social-card">
-        <div class="social-card__intro">
-          <p class="eyebrow">SÍGUENOS EN REDES</p>
-          <h2>Más de Café Petropolys, también en tus redes</h2>
-          <p>Platillos, promociones, novedades y un poco del día a día del restaurante.</p>
-        </div>
-
-        <div class="social-grid" aria-label="Redes sociales de Café Petropolys">
-          <a class="social-link social-link--tiktok" href="https://www.tiktok.com/@petropolys.restau?_r=1&amp;_t=ZS-9A48TlDZdYN" target="_blank" rel="noopener" aria-label="Seguir a Café Petropolys en TikTok">
-            <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img"><path d="M14.6 3.1c.5 2.5 1.9 4 4.3 4.3v3.1c-1.7-.1-3.1-.6-4.3-1.5v6.5a6.2 6.2 0 1 1-5.3-6.1v3.2a3.1 3.1 0 1 0 2.2 3V3.1h3.1Z"/></svg></span>
-            <span class="social-copy"><b>TikTok</b><small>@petropolys.restau</small></span>
-            <span class="social-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="social-link social-link--instagram" href="https://www.instagram.com/petropolys_oficial?stkn=MXp4YngxcXlwNXc=" target="_blank" rel="noopener" aria-label="Seguir a Café Petropolys en Instagram">
-            <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img"><path d="M7.2 2.5h9.6A4.7 4.7 0 0 1 21.5 7v10a4.7 4.7 0 0 1-4.7 4.5H7.2A4.7 4.7 0 0 1 2.5 17V7a4.7 4.7 0 0 1 4.7-4.5Zm0 2A2.7 2.7 0 0 0 4.5 7v10a2.7 2.7 0 0 0 2.7 2.5h9.6a2.7 2.7 0 0 0 2.7-2.5V7a2.7 2.7 0 0 0-2.7-2.5H7.2Zm9.9 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7.3a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4Zm0 2a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Z"/></svg></span>
-            <span class="social-copy"><b>Instagram</b><small>@petropolys_oficial</small></span>
-            <span class="social-arrow" aria-hidden="true">↗</span>
-          </a>
-
-          <a class="social-link social-link--facebook" href="https://www.facebook.com/share/19cZ4cFaQ9/" target="_blank" rel="noopener" aria-label="Seguir a Café Petropolys en Facebook">
-            <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img"><path d="M13.5 21.5v-8h2.7l.4-3h-3.1V8.6c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4v1.8H7.3v3h2.8v8h3.4Z"/></svg></span>
-            <span class="social-copy"><b>Facebook</b><small>Café Petropolys</small></span>
-            <span class="social-arrow" aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="shell location-section" id="ubicacion">
-      <div class="location-card">
-        <div class="location-copy">
-          <p class="eyebrow">VISÍTANOS</p>
-          <h2>Tu parada en el centro de Mérida</h2>
-          <p class="address">C. 70 530, Centro, 97000 Mérida, Yuc.</p>
-          <p class="location-text">Desayunos, comida y antojitos en un formato digital listo para compartir por QR. Si tienes dudas o quieres confirmar disponibilidad, escríbenos directo por WhatsApp.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://www.google.com/maps/place/Caf%C3%A9+Petropolys/@20.962252,-89.6309797,91m/data=!3m1!1e3!4m14!1m7!3m6!1s0x8f56732ad4d98055:0xb05ff9cbe6b49810!2sPetropolys+Sucursal!8m2!3d20.9631494!4d-89.6304747!16s%2Fg%2F11rcp_9w6w!3m5!1s0x8f5673da09dd6561:0x90449464ea4cafcc!8m2!3d20.962226!4d-89.6306792!16s%2Fg%2F1q69pl37g?entry=ttu&g_ep=EgoyMDI2MDkyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Abrir en Maps</a>
-            <a class="btn btn-whatsapp" data-order-dynamic href="https://wa.me/529992249678?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Caf%C3%A9%20Petropolys.%20%F0%9F%8D%BD%EF%B8%8F" target="_blank" rel="noopener">Quiero ordenar</a>
+            <p hidden="" id="lightboxError" role="status">
+              No se pudo cargar la imagen. Intenta abrirla de nuevo.
+            </p>
           </div>
+          <button
+            aria-label="Imagen siguiente"
+            class="lightbox-nav lightbox-next"
+            type="button"
+          >
+            ›
+          </button>
         </div>
-        <div class="location-brand">
-          <img src="assets/logo-oficial.png" alt="Logotipo de Café Petropolys" />
-        </div>
+        <p class="lightbox-help" id="lightboxHelp">
+          Desliza para cambiar · Pellizca o usa + para ampliar · Arrastra al
+          acercar
+        </p>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-row">
-      <div>
-        <strong>Café Petropolys</strong>
-        <p>Menú digital · Mérida, Yucatán · Abierto 24/7</p>
-      </div>
-      <div class="footer-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#menu">Menú</a>
-        <a href="#platillos-actuales">Platillos</a>
-        <a href="#redes">Redes</a>
-        <a href="#pedidos">Pedidos</a>
-        <a href="#ubicacion">Ubicación</a>
-      </div>
-    </div>
-  </footer>
-
-  <a class="floating-wa" data-order-dynamic href="https://wa.me/529992249678?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Caf%C3%A9%20Petropolys.%20%F0%9F%8D%BD%EF%B8%8F" target="_blank" rel="noopener" aria-label="Hacer pedido por WhatsApp">
-    <span>WA</span><b>Ordenar</b>
-  </a>
-
-  <dialog class="lightbox" id="lightbox">
-    <div class="lightbox-box">
-      <button class="close-lightbox" type="button" aria-label="Cerrar">×</button>
-      <p class="lightbox-title" id="lightboxTitle"></p>
-      <img id="lightboxImage" class="lightbox-image" alt="Vista ampliada del menú" />
-    </div>
-  </dialog>
-
-  <script src="script.js"></script>
-</body>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
 </html>
