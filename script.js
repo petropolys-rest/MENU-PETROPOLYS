@@ -111,7 +111,7 @@ window.addEventListener(
   { passive: true },
 );
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 900) closeMenu();
+  if (window.innerWidth > 1100) closeMenu();
   updateActiveNav();
 });
 updateActiveNav();

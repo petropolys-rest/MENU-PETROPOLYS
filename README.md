@@ -15,16 +15,19 @@ Puedes revisar el proyecto localmente abriendo `index.html` en un navegador mode
 ## Qué cambió
 
 - Identidad consistente con crema, naranja `#FF800D`, amarillo `#FFB300`, vino, café oscuro y verde oscuro en los botones secundarios.
-- Portada con fachada original, titular protagonista, llamadas al menú y WhatsApp e información 24/7.
+- Portada con la fotografía compartida el 5 de octubre, titular protagonista, llamadas al menú y WhatsApp e información 24/7.
 - Navegación sticky con menú móvil, enlaces nativos y estado activo. Los anchors respetan la altura del encabezado y el historial del navegador.
 - Galería uniforme sin nombres de platillos: cuatro columnas en escritorio, dos en móvil.
-- Seis categorías del menú con las páginas existentes, completas y sin recorte.
-- Nosotros con composición editorial y collage de fotos del restaurante y sus platillos.
+- El menú se muestra antes de la galería de Platillos; conserva seis categorías con las páginas existentes, completas y sin recorte.
+- Textos pequeños ampliados en escritorio y móvil.
+- Dirección: Calle 70 núm. 530, entre 69 y 71, Centro, detrás de la terminal de ADO Mérida.
+- Pagos con tarjeta y transferencia, y facturación del consumo, con la indicación “Envíanos tus datos fiscales”, visibles en Pedidos.
+- Nosotros con composición editorial y las cuatro fotografías reales del interior, ampliables en el visor de imágenes.
 - Dos tarjetas de pedidos con turno disponible destacado.
 - Las cinco reseñas originales, con sus textos, autores, estrellas y antigüedad recopilada, sobre fondo café cálido.
 - Dirección, mapa interactivo integrado de Google Maps, WhatsApp y SVG de TikTok, Instagram y Facebook en mayor tamaño.
 - Tipografías Fraunces y Montserrat incluidas localmente con sus licencias.
-- Versiones WebP para mostrar la página; los JPG y PNG originales permanecen intactos y se abren en el visor ampliado.
+- Versiones WebP para mostrar la página; los JPG, JPEG y PNG originales permanecen intactos y se abren en el visor ampliado.
 
 ## Pedidos por horario
 
@@ -53,8 +56,8 @@ Consulta `VALIDACION.md`. Los enlaces externos se conservaron y se verificaron s
 
 ## Aguas frescas y cortesías
 
-- Aguas frescas de sabor 100% naturales: jamaica, horchata, tamarindo, limón con chía y pepino. Pitaya por temporada.
-- Con el consumo, 2 horas de estacionamiento de cortesía frente al Hotel Tierra Del Sol, a 3 minutos del restaurante. Se incluye la fotografía del hotel proporcionada.
+- Aguas frescas de sabor 100% naturales: jamaica, horchata, tamarindo, limón con chía y pepino. Pitahaya por temporada. También se menciona el jugo de naranja.
+- El encabezado “Contamos con estacionamiento” presenta el servicio. Con el consumo, 2 horas de estacionamiento de cortesía frente al Hotel Tierra Del Sol, a 3 minutos del restaurante. Se incluyen las fotografías y la guía proporcionadas del estacionamiento.
 - Postre de cortesía para quienes visitan desde la página web o redes sociales, indicando cómo encontraron el restaurante.
 - Pregunta “¿Ya sabes qué se te antoja?” situada inmediatamente debajo de la galería de Platillos.
 
@@ -63,3 +66,8 @@ Estos beneficios y detalles fueron proporcionados por el restaurante.
 ## Fotos del estacionamiento
 
 La sección de estacionamiento incluye la guía con flechas, la entrada del estacionamiento y las referencias de la calle. Las tres imágenes pueden abrirse en el visor existente con navegación, zoom y arrastre. Los PNG proporcionados se conservan completos y se usan versiones WebP más ligeras en la página.
+
+
+## Fotografías del interior y facturación
+
+Nosotros incluye las cuatro fotos del interior compartidas el 5 de octubre, con un collage adaptable y acceso al visor para verlas completas. Los originales se encuentran en `assets/interior-*.jpg`; la página carga sus copias WebP optimizadas. En Pedidos, el aviso de facturación pide enviar los datos fiscales. El estacionamiento se presenta como servicio disponible y aclara las 2 horas de cortesía con el consumo.

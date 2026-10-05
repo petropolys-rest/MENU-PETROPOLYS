@@ -22,17 +22,14 @@
       content="Mérida sabe mejor en Café Petropolys. Desayunos, cocina mexicana y yucateca las 24 horas. Consulta el menú, pide por WhatsApp y encuentra cómo llegar."
       property="og:description"
     />
-    <meta
-      content="assets/fachada-principal-completa.webp"
-      property="og:image"
-    />
+    <meta content="assets/fachada-portada.webp" property="og:image" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta
       content="Café Petropolys en el centro de Mérida"
       property="og:image:alt"
     />
     <meta content="1600" property="og:image:width" />
-    <meta content="900" property="og:image:height" />
+    <meta content="876" property="og:image:height" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="styles.css" rel="stylesheet" />
     <script type="application/ld+json">
@@ -40,11 +37,11 @@
         "@context": "https://schema.org",
         "@type": "Restaurant",
         "name": "Café Petropolys",
-        "image": "assets/fachada-principal-completa.webp",
+        "image": "assets/fachada-portada.webp",
         "telephone": ["+52 999 224 9678", "+52 999 546 3816"],
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "C. 70 530, Centro",
+          "streetAddress": "Calle 70 núm. 530, entre 69 y 71, Centro",
           "addressLocality": "Mérida",
           "addressRegion": "Yucatán",
           "postalCode": "97000",
@@ -53,6 +50,7 @@
         "openingHours": "Mo-Su 00:00-23:59",
         "servesCuisine": ["Mexicana", "Yucateca"],
         "hasMenu": "#menu",
+        "paymentAccepted": ["Tarjeta", "Transferencia"],
         "sameAs": [
           "https://www.tiktok.com/@petropolys.restau?_r=1&_t=ZS-9A48TlDZdYN",
           "https://www.instagram.com/petropolys_oficial?stkn=MXp4YngxcXlwNXc=",
@@ -98,8 +96,8 @@
           ><span class="sr-only">Abrir navegación</span>
         </button>
         <nav aria-label="Navegación principal" class="top-nav" id="topNav">
-          <a href="#destacados">Galería</a>
           <a href="#menu">Menú</a>
+          <a href="#destacados">Galería</a>
           <a href="#nosotros">Nosotros</a>
           <a href="#resenas">Reseñas</a>
           <a href="#ubicacion">Visítanos</a>
@@ -117,11 +115,11 @@
     <main class="main-content">
       <section class="hero" id="inicio">
         <img
-          alt="Fachada de Café Petropolys en el centro de Mérida al atardecer"
+          alt="Fachada de Café Petropolys junto a la terminal de ADO en el centro de Mérida"
           class="hero-photo"
           fetchpriority="high"
-          height="900"
-          src="assets/fachada-principal-completa.webp"
+          height="876"
+          src="assets/fachada-portada.webp"
           width="1600"
         />
         <div class="hero-overlay"></div>
@@ -153,7 +151,10 @@
             </div>
             <div class="hero-facts">
               <h2>24/7<small>Abierto todos los días</small></h2>
-              <p>Centro de Mérida<small>C. 70 530 · Yucatán</small></p>
+              <p>
+                Centro de Mérida<small>Calle 70 núm. 530, entre 69 y 71</small
+                ><small>Detrás de la terminal de ADO Mérida</small>
+              </p>
             </div>
             <a
               href="https://www.google.com/maps/place/Caf%C3%A9+Petropolys/@20.9622261,-89.6309135,77m/data=!3m1!1e3!4m6!3m5!1s0x8f5673da09dd6561:0x90449464ea4cafcc!8m2!3d20.962226!4d-89.6306792!16s%2Fg%2F1q69pl37g?entry=ttu"
@@ -165,180 +166,8 @@
         </div>
         <div class="hero-bottom shell">
           <span>DESAYUNOS · COCINA MEXICANA · SABOR YUCATECO</span
-          ><a aria-label="Descubrir nuestros platillos" href="#destacados"
+          ><a aria-label="Descubrir nuestro menú" href="#menu"
             >DESCUBRE EL SABOR <span aria-hidden="true">↓</span></a
-          >
-        </div>
-      </section>
-      <section class="section gallery-section shell" id="destacados">
-        <div class="section-heading section-heading--platillos">
-          <h2>PLATILLOS</h2>
-        </div>
-        <div aria-label="Galería de platillos destacados" class="food-mosaic">
-          <button
-            aria-label="Ampliar fotografía de platillo 1"
-            class="food-shot"
-            data-gallery="food"
-            data-open="assets/platillo-fajitas-res.jpg"
-            data-title="Café Petropolys"
-            type="button"
-          >
-            <img
-              alt="Fajitas de res servido en Café Petropolys"
-              decoding="async"
-              height="760"
-              loading="lazy"
-              src="assets/platillo-fajitas-res.webp"
-              width="427"
-            /><span class="food-caption"
-              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
-            >
-          </button>
-          <button
-            aria-label="Ampliar fotografía de platillo 2"
-            class="food-shot"
-            data-gallery="food"
-            data-open="assets/platillo-huevos-hotcakes.jpg"
-            data-title="Café Petropolys"
-            type="button"
-          >
-            <img
-              alt="Huevos con hotcakes servido en Café Petropolys"
-              decoding="async"
-              height="760"
-              loading="lazy"
-              src="assets/platillo-huevos-hotcakes.webp"
-              width="427"
-            /><span class="food-caption"
-              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
-            >
-          </button>
-          <button
-            aria-label="Ampliar fotografía de platillo 3"
-            class="food-shot"
-            data-gallery="food"
-            data-open="assets/platillo-sopa-lima.jpg"
-            data-title="Café Petropolys"
-            type="button"
-          >
-            <img
-              alt="Sopa de lima servido en Café Petropolys"
-              decoding="async"
-              height="760"
-              loading="lazy"
-              src="assets/platillo-sopa-lima.webp"
-              width="427"
-            /><span class="food-caption"
-              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
-            >
-          </button>
-          <button
-            aria-label="Ampliar fotografía de platillo 4"
-            class="food-shot"
-            data-gallery="food"
-            data-open="assets/platillo-arrachera-verduras.jpg"
-            data-title="Café Petropolys"
-            type="button"
-          >
-            <img
-              alt="Arrachera con verduras servido en Café Petropolys"
-              decoding="async"
-              height="760"
-              loading="lazy"
-              src="assets/platillo-arrachera-verduras.webp"
-              width="427"
-            /><span class="food-caption"
-              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
-            >
-          </button>
-          <button
-            aria-label="Ampliar fotografía de platillo 5"
-            class="food-shot"
-            data-gallery="food"
-            data-open="assets/platillo-hamburguesa-papas.jpg"
-            data-title="Café Petropolys"
-            type="button"
-          >
-            <img
-              alt="Hamburguesa con papas servido en Café Petropolys"
-              decoding="async"
-              height="760"
-              loading="lazy"
-              src="assets/platillo-hamburguesa-papas.webp"
-              width="427"
-            /><span class="food-caption"
-              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
-            >
-          </button>
-          <button
-            aria-label="Ampliar fotografía de platillo 6"
-            class="food-shot"
-            data-gallery="food"
-            data-open="assets/platillo-fajitas-espagueti.jpg"
-            data-title="Café Petropolys"
-            type="button"
-          >
-            <img
-              alt="Fajitas con espagueti servido en Café Petropolys"
-              decoding="async"
-              height="760"
-              loading="lazy"
-              src="assets/platillo-fajitas-espagueti.webp"
-              width="427"
-            /><span class="food-caption"
-              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
-            >
-          </button>
-          <button
-            aria-label="Ampliar fotografía de platillo 7"
-            class="food-shot"
-            data-gallery="food"
-            data-open="assets/platillo-pollo-salsa-verde.jpg"
-            data-title="Café Petropolys"
-            type="button"
-          >
-            <img
-              alt="Pollo en salsa verde servido en Café Petropolys"
-              decoding="async"
-              height="760"
-              loading="lazy"
-              src="assets/platillo-pollo-salsa-verde.webp"
-              width="427"
-            /><span class="food-caption"
-              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
-            >
-          </button>
-          <button
-            aria-label="Ampliar fotografía de platillo 8"
-            class="food-shot"
-            data-gallery="food"
-            data-open="assets/platillo-pollo-crujiente.jpg"
-            data-title="Café Petropolys"
-            type="button"
-          >
-            <img
-              alt="Pollo crujiente servido en Café Petropolys"
-              decoding="async"
-              height="760"
-              loading="lazy"
-              src="assets/platillo-pollo-crujiente.webp"
-              width="427"
-            /><span class="food-caption"
-              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
-            >
-          </button>
-        </div>
-        <div class="gallery-invitation">
-          <div>
-            <h3>¿Ya sabes qué se te antoja?</h3>
-            <p>
-              Cuéntanos que vienes de nuestra
-              <strong>página web o redes sociales</strong> y disfruta un
-              <strong>postre de cortesía.</strong>
-            </p>
-          </div>
-          <a class="btn btn-primary" href="#menu"
-            >Ver menú <span aria-hidden="true">↗</span></a
           >
         </div>
       </section>
@@ -563,10 +392,185 @@
                 <li>Pepino</li>
               </ul>
               <p class="seasonal-flavor">
-                <strong>Pitaya</strong> <span>por temporada</span>
+                <strong>Pitahaya</strong> <span>por temporada</span>
+              </p>
+              <p class="orange-juice">
+                También disfruta nuestro <strong>jugo de naranja.</strong>
               </p>
             </div>
           </aside>
+        </div>
+      </section>
+      <section class="section gallery-section shell" id="destacados">
+        <div class="section-heading section-heading--platillos">
+          <h2>PLATILLOS</h2>
+        </div>
+        <div aria-label="Galería de platillos destacados" class="food-mosaic">
+          <button
+            aria-label="Ampliar fotografía de platillo 1"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-fajitas-res.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Fajitas de res servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-fajitas-res.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 2"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-huevos-hotcakes.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Huevos con hotcakes servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-huevos-hotcakes.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 3"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-sopa-lima.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Sopa de lima servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-sopa-lima.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 4"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-arrachera-verduras.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Arrachera con verduras servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-arrachera-verduras.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 5"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-hamburguesa-papas.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Hamburguesa con papas servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-hamburguesa-papas.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 6"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-fajitas-espagueti.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Fajitas con espagueti servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-fajitas-espagueti.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 7"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-pollo-salsa-verde.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Pollo en salsa verde servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-pollo-salsa-verde.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+          <button
+            aria-label="Ampliar fotografía de platillo 8"
+            class="food-shot"
+            data-gallery="food"
+            data-open="assets/platillo-pollo-crujiente.jpg"
+            data-title="Café Petropolys"
+            type="button"
+          >
+            <img
+              alt="Pollo crujiente servido en Café Petropolys"
+              decoding="async"
+              height="760"
+              loading="lazy"
+              src="assets/platillo-pollo-crujiente.webp"
+              width="427"
+            /><span class="food-caption"
+              ><span>Ampliar <span aria-hidden="true">↗</span></span></span
+            >
+          </button>
+        </div>
+        <div class="gallery-invitation">
+          <div>
+            <h3>¿Ya sabes qué se te antoja?</h3>
+            <p>
+              Cuéntanos que vienes de nuestra
+              <strong>página web o redes sociales</strong> y disfruta un
+              <strong>postre de cortesía.</strong>
+            </p>
+          </div>
+          <a class="btn btn-primary" href="#menu"
+            >Ver menú <span aria-hidden="true">↗</span></a
+          >
         </div>
       </section>
       <section class="about-section" id="nosotros">
@@ -589,49 +593,81 @@
             >
           </div>
           <div
-            aria-label="Café Petropolys y algunos de sus platillos"
-            class="about-collage"
+            aria-label="Fotos del interior de Café Petropolys"
+            class="about-collage about-collage--interior"
           >
-            <figure class="about-collage__item about-collage__item--a">
+            <button
+              aria-label="Ampliar fotografía del interior 1 de Café Petropolys"
+              class="about-collage__item about-collage__item--a"
+              data-gallery="interior"
+              data-open="assets/interior-salon.jpg"
+              data-title="Interior de Café Petropolys"
+              type="button"
+            >
               <img
-                alt="Fachada de Café Petropolys"
+                alt="Mesas, menús y salón de Café Petropolys"
                 decoding="async"
-                height="900"
+                height="1600"
                 loading="lazy"
-                src="assets/fachada-principal-completa.webp"
-                width="1600"
+                src="assets/interior-salon.webp"
+                width="902"
               />
-            </figure>
-            <figure class="about-collage__item about-collage__item--b">
+              <span class="about-photo-hint" aria-hidden="true">Ampliar ↗</span>
+            </button>
+            <button
+              aria-label="Ampliar fotografía del interior 2 de Café Petropolys"
+              class="about-collage__item about-collage__item--b"
+              data-gallery="interior"
+              data-open="assets/interior-detalles.jpg"
+              data-title="Interior de Café Petropolys"
+              type="button"
+            >
               <img
-                alt="Desayuno servido en Café Petropolys"
+                alt="Mesa y detalles decorativos del interior de Café Petropolys"
                 decoding="async"
-                height="760"
+                height="1600"
                 loading="lazy"
-                src="assets/platillo-huevos-hotcakes.webp"
-                width="427"
+                src="assets/interior-detalles.webp"
+                width="902"
               />
-            </figure>
-            <figure class="about-collage__item about-collage__item--c">
+              <span class="about-photo-hint" aria-hidden="true">Ampliar ↗</span>
+            </button>
+            <button
+              aria-label="Ampliar fotografía del interior 3 de Café Petropolys"
+              class="about-collage__item about-collage__item--c"
+              data-gallery="interior"
+              data-open="assets/interior-mesas.jpg"
+              data-title="Interior de Café Petropolys"
+              type="button"
+            >
               <img
-                alt="Platillo servido en Café Petropolys"
+                alt="Mesas y asientos del comedor de Café Petropolys"
                 decoding="async"
-                height="760"
+                height="1600"
                 loading="lazy"
-                src="assets/platillo-sopa-lima.webp"
-                width="427"
+                src="assets/interior-mesas.webp"
+                width="902"
               />
-            </figure>
-            <figure class="about-collage__item about-collage__item--d">
+              <span class="about-photo-hint" aria-hidden="true">Ampliar ↗</span>
+            </button>
+            <button
+              aria-label="Ampliar fotografía del interior 4 de Café Petropolys"
+              class="about-collage__item about-collage__item--d"
+              data-gallery="interior"
+              data-open="assets/interior-ambiente.jpg"
+              data-title="Interior de Café Petropolys"
+              type="button"
+            >
               <img
-                alt="Platillo servido en Café Petropolys"
+                alt="Vista del salón y mobiliario tradicional de Café Petropolys"
                 decoding="async"
-                height="760"
+                height="1600"
                 loading="lazy"
-                src="assets/platillo-arrachera-verduras.webp"
-                width="427"
+                src="assets/interior-ambiente.webp"
+                width="902"
               />
-            </figure>
+              <span class="about-photo-hint" aria-hidden="true">Ampliar ↗</span>
+            </button>
             <span class="about-collage__seal"
               >Sabor de casa.<br /><b>A cualquier hora.</b></span
             >
@@ -678,6 +714,42 @@
               >
             </article>
           </div>
+        </div>
+        <div class="shell payment-services" aria-label="Pagos y facturación">
+          <p>
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <rect x="2" y="5" width="20" height="14" rx="3" />
+              <path d="M2 10h20M6 15h4" />
+            </svg>
+            <span
+              >Aceptamos pagos con
+              <strong>tarjeta y transferencia.</strong></span
+            >
+          </p>
+          <p>
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z" />
+              <path d="M9 8h6M9 12h6" />
+            </svg>
+            <span
+              ><strong>Facturamos tu consumo.</strong
+              ><small class="billing-details"
+                >Envíanos tus datos fiscales.</small
+              ></span
+            >
+          </p>
         </div>
       </section>
       <section class="reviews-section reviews-section--coffee" id="resenas">
@@ -760,7 +832,11 @@
           <div class="visit-copy">
             <p class="eyebrow">VISÍTANOS</p>
             <h2>Nos vemos en Petropolys.</h2>
-            <address>C. 70 530, Centro, 97000 Mérida, Yucatán.</address>
+            <address>
+              Calle 70 núm. 530, entre 69 y 71, Centro,<br />Mérida, Yucatán.<br /><strong
+                >Detrás de la terminal de ADO Mérida.</strong
+              >
+            </address>
             <div class="visit-actions">
               <a
                 class="btn btn-dark"
@@ -832,7 +908,7 @@
               height="480"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              src="https://maps.google.com/maps?q=Caf%C3%A9%20Petropolys%2C%20C.%2070%20530%2C%20Centro%2C%20M%C3%A9rida%2C%20Yucat%C3%A1n&amp;ll=20.962226,-89.6306792&amp;z=17&amp;output=embed"
+              src="https://maps.google.com/maps?q=Caf%C3%A9%20Petropolys%2C%20Calle%2070%20n%C3%BAm.%20530%2C%20entre%2069%20y%2071%2C%20Centro%2C%20M%C3%A9rida%2C%20Yucat%C3%A1n&amp;ll=20.962226,-89.6306792&amp;z=17&amp;output=embed"
               title="Ubicación de Café Petropolys en Google Maps"
               width="600"
             ></iframe>
@@ -874,12 +950,13 @@
             </button>
           </div>
           <div class="parking-feature-copy">
-            <p class="eyebrow">UN BENEFICIO PARA TU VISITA</p>
-            <h3>2 horas de estacionamiento <em>de cortesía.</em></h3>
+            <p class="eyebrow">ESTACIONAMIENTO</p>
+            <h3>Contamos con <em>estacionamiento.</em></h3>
             <p>
               Con tu consumo en Café Petropolys, disfruta de
-              <strong>2 horas de estacionamiento de cortesía</strong> frente al
-              <strong>Hotel Tierra Del Sol</strong>, a tan solo
+              <strong>2 horas de estacionamiento de cortesía.</strong>
+              Lo encontrarás frente al <strong>Hotel Tierra Del Sol</strong>, a
+              tan solo
               <strong>3 minutos del restaurante.</strong>
             </p>
             <div
