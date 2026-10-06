@@ -2245,22 +2245,49 @@ section[id] {
     font-size: 11px;
   }
 }
-.reveal{opacity:0;transform:translateY(32px);animation:subir .9s cubic-bezier(.22,1,.36,1) forwards}
-.d1{animation-delay:.1s}
-.d2{animation-delay:.3s}
-.d3{animation-delay:.5s}
-.d4{animation-delay:.7s}
-@keyframes subir{to{opacity:1;transform:translateY(0)}}
+/* --- ANIMACIONES ELEGANTES DE CLAUDE CORREGIDAS --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: subirSmooth 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+.d1 { animation-delay: 0.1s; }
+.d2 { animation-delay: 0.25s; }
+.d3 { animation-delay: 0.4s; }
+.d4 { animation-delay: 0.5s; }
 
-.btn{position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.22,1,.36,1)}
-.btn span{position:relative;z-index:1}
-.btn::before{content:"";position:absolute;inset:0;transform:translateX(-101%);transition:transform .35s cubic-bezier(.22,1,.36,1)}
-.btn:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.4)}
-.btn:hover::before{transform:translateX(0)}
-.btn-primary::before{background:#ffb400}
-.btn-primary:hover{color:#2a1500}
-.btn-ghost::before{background:#fff}
-.btn-ghost:hover{color:#2a1500}
+@keyframes subirSmooth {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-@media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
+/* EFECTOS HOVER COMPATIBLES (SIN VOLVER INVISIBLES LAS LETRAS) */
+.hero-actions .btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
 
+.hero-actions .btn:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important;
+}
+
+/* Mantener el texto blanco en el botón de WhatsApp al pasar el mouse */
+.hero-actions .btn-secondary:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Mantener el texto oscuro original en el botón naranja al pasar el mouse */
+.hero-actions .btn-primary:hover {
+  color: #2a1500 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
