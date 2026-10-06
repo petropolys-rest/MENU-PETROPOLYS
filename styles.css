@@ -2245,3 +2245,22 @@ section[id] {
     font-size: 11px;
   }
 }
+.reveal{opacity:0;transform:translateY(32px);animation:subir .9s cubic-bezier(.22,1,.36,1) forwards}
+.d1{animation-delay:.1s}
+.d2{animation-delay:.3s}
+.d3{animation-delay:.5s}
+.d4{animation-delay:.7s}
+@keyframes subir{to{opacity:1;transform:translateY(0)}}
+
+.btn{position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.btn span{position:relative;z-index:1}
+.btn::before{content:"";position:absolute;inset:0;transform:translateX(-101%);transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.btn:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.4)}
+.btn:hover::before{transform:translateX(0)}
+.btn-primary::before{background:#ffb400}
+.btn-primary:hover{color:#2a1500}
+.btn-ghost::before{background:#fff}
+.btn-ghost:hover{color:#2a1500}
+
+@media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
+
