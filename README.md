@@ -71,3 +71,13 @@ La sección de estacionamiento incluye la guía con flechas, la entrada del esta
 ## Fotografías del interior y facturación
 
 Nosotros incluye las cuatro fotos del interior compartidas el 5 de octubre, con un collage adaptable y acceso al visor para verlas completas. Los originales se encuentran en `assets/interior-*.jpg`; la página carga sus copias WebP optimizadas. En Pedidos, el aviso de facturación pide enviar los datos fiscales. El estacionamiento se presenta como servicio disponible y aclara las 2 horas de cortesía con el consumo.
+
+## Video de portada y animaciones
+
+- La portada usa el video del 7 de octubre como fondo en bucle, silencioso y sin controles, con el mismo comportamiento que un GIF. Pesa mucho menos y conserva mejor la calidad: `assets/portada-video.webm` / `.mp4` en 1080p para escritorio y `assets/portada-video-movil.webm` / `.mp4` en 480p para celulares. Se recortó el audio y se fundió el final con el inicio para que el bucle no muestre un salto.
+- `assets/portada-video-poster.webp` se muestra mientras carga el video. Si el celular bloquea la reproducción automática (por ejemplo, con el ahorro de batería), aparece esa imagen.
+- El video se pausa fuera de pantalla y en pestañas ocultas. Con «Reducir movimiento» activado en el sistema no se reproduce y todas las animaciones se desactivan.
+- Entrada de la portada: telón oscuro, zoom lento del video, titular revelado por líneas, subrayado naranja en “Petropolys.” y tarjeta 24/7 con desenfoque.
+- Al desplazarse: barra de progreso, encabezado translúcido, parallax y desvanecimiento de la portada, titulares palabra por palabra y revelado escalonado de tarjetas, fotos, estrellas y sabores.
+- Cinta naranja continua bajo la portada que acelera con el scroll y cambia de sentido al subir.
+- Detalles al pasar el mouse: inclinación 3D con reflejo en menús y platillos, destello en botones, anillo pulsante en WhatsApp, latido en el turno disponible y entrada animada del visor y del menú móvil.

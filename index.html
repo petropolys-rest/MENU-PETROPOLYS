@@ -31,6 +31,17 @@
     <meta content="1600" property="og:image:width" />
     <meta content="876" property="og:image:height" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <script>
+      // Animaciones solo si el visitante no pidió movimiento reducido.
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches)
+        document.documentElement.classList.add("motion");
+    </script>
+    <link
+      as="image"
+      href="assets/portada-video-poster.webp"
+      rel="preload"
+      type="image/webp"
+    />
     <link href="styles.css" rel="stylesheet" />
     <script type="application/ld+json">
       {
@@ -67,6 +78,7 @@
   </head>
   <body>
     <a class="skip-link" href="#inicio">Ir al contenido</a>
+    <div aria-hidden="true" class="scroll-progress"></div>
     <header class="site-header">
       <div class="shell nav-wrap">
         <a
@@ -114,21 +126,45 @@
     </header>
     <main class="main-content">
       <section class="hero" id="inicio">
-        <img
-          alt="Fachada de Café Petropolys junto a la terminal de ADO en el centro de Mérida"
-          class="hero-photo"
-          fetchpriority="high"
-          height="876"
-          src="assets/fachada-portada.webp"
-          width="1600"
-        />
+        <div class="hero-media">
+          <video
+            aria-label="Fachada de Café Petropolys junto a la terminal de ADO en el centro de Mérida"
+            autoplay
+            class="hero-video"
+            disablepictureinpicture
+            disableremoteplayback
+            height="1080"
+            loop
+            muted
+            playsinline
+            poster="assets/portada-video-poster.webp"
+            preload="auto"
+            width="1920"
+          >
+            <source
+              media="(max-width: 600px)"
+              src="assets/portada-video-movil.webm"
+              type="video/webm"
+            />
+            <source
+              media="(max-width: 600px)"
+              src="assets/portada-video-movil.mp4"
+              type="video/mp4"
+            />
+            <source src="assets/portada-video.webm" type="video/webm" />
+            <source src="assets/portada-video.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div class="hero-overlay"></div>
         <div class="shell hero-grid">
           <div class="hero-copy">
             <p class="eyebrow hero-eyebrow">
               EN EL CORAZÓN DE MÉRIDA · ABIERTO 24/7
             </p>
-            <h1>Mérida sabe mejor<br />en <em>Petropolys.</em></h1>
+            <h1>
+              <span class="hero-line"><span>Mérida sabe mejor</span></span>
+              <span class="hero-line"><span>en <em>Petropolys.</em></span></span>
+            </h1>
             <p class="hero-lead">
               De un buen desayuno a ese antojo de medianoche. Cocina mexicana y
               yucateca, porciones generosas y una mesa para ti.
@@ -167,10 +203,18 @@
         <div class="hero-bottom shell">
           <span>DESAYUNOS · COCINA MEXICANA · SABOR YUCATECO</span
           ><a aria-label="Descubrir nuestro menú" href="#menu"
-            >DESCUBRE EL SABOR <span aria-hidden="true">↓</span></a
+            >DESCUBRE EL SABOR <span aria-hidden="true" class="scroll-cue">↓</span></a
           >
         </div>
       </section>
+      <div aria-hidden="true" class="marquee">
+        <div class="marquee-track">
+          <div class="marquee-group"><span>Abierto 24/7</span><i>✦</i><span>Desayunos</span><i>✦</i><span>Cocina mexicana</span><i>✦</i><span>Sabor yucateco</span><i>✦</i><span>Aguas frescas naturales</span><i>✦</i><span>Postre de cortesía</span><i>✦</i><span>Detrás del ADO Mérida</span><i>✦</i></div>
+          <div class="marquee-group"><span>Abierto 24/7</span><i>✦</i><span>Desayunos</span><i>✦</i><span>Cocina mexicana</span><i>✦</i><span>Sabor yucateco</span><i>✦</i><span>Aguas frescas naturales</span><i>✦</i><span>Postre de cortesía</span><i>✦</i><span>Detrás del ADO Mérida</span><i>✦</i></div>
+          <div class="marquee-group"><span>Abierto 24/7</span><i>✦</i><span>Desayunos</span><i>✦</i><span>Cocina mexicana</span><i>✦</i><span>Sabor yucateco</span><i>✦</i><span>Aguas frescas naturales</span><i>✦</i><span>Postre de cortesía</span><i>✦</i><span>Detrás del ADO Mérida</span><i>✦</i></div>
+          <div class="marquee-group"><span>Abierto 24/7</span><i>✦</i><span>Desayunos</span><i>✦</i><span>Cocina mexicana</span><i>✦</i><span>Sabor yucateco</span><i>✦</i><span>Aguas frescas naturales</span><i>✦</i><span>Postre de cortesía</span><i>✦</i><span>Detrás del ADO Mérida</span><i>✦</i></div>
+        </div>
+      </div>
       <section class="menu-section" id="menu">
         <div class="shell">
           <div class="section-heading section-heading--menu">
@@ -414,14 +458,14 @@
             data-title="Café Petropolys"
             type="button"
           >
-            <img
+            <span class="food-frame"><img
               alt="Fajitas de res servido en Café Petropolys"
               decoding="async"
               height="760"
               loading="lazy"
               src="assets/platillo-fajitas-res.webp"
               width="427"
-            /><span class="food-caption"
+            /></span><span class="food-caption"
               ><span>Ampliar <span aria-hidden="true">↗</span></span></span
             >
           </button>
@@ -433,14 +477,14 @@
             data-title="Café Petropolys"
             type="button"
           >
-            <img
+            <span class="food-frame"><img
               alt="Huevos con hotcakes servido en Café Petropolys"
               decoding="async"
               height="760"
               loading="lazy"
               src="assets/platillo-huevos-hotcakes.webp"
               width="427"
-            /><span class="food-caption"
+            /></span><span class="food-caption"
               ><span>Ampliar <span aria-hidden="true">↗</span></span></span
             >
           </button>
@@ -452,14 +496,14 @@
             data-title="Café Petropolys"
             type="button"
           >
-            <img
+            <span class="food-frame"><img
               alt="Sopa de lima servido en Café Petropolys"
               decoding="async"
               height="760"
               loading="lazy"
               src="assets/platillo-sopa-lima.webp"
               width="427"
-            /><span class="food-caption"
+            /></span><span class="food-caption"
               ><span>Ampliar <span aria-hidden="true">↗</span></span></span
             >
           </button>
@@ -471,14 +515,14 @@
             data-title="Café Petropolys"
             type="button"
           >
-            <img
+            <span class="food-frame"><img
               alt="Arrachera con verduras servido en Café Petropolys"
               decoding="async"
               height="760"
               loading="lazy"
               src="assets/platillo-arrachera-verduras.webp"
               width="427"
-            /><span class="food-caption"
+            /></span><span class="food-caption"
               ><span>Ampliar <span aria-hidden="true">↗</span></span></span
             >
           </button>
@@ -490,14 +534,14 @@
             data-title="Café Petropolys"
             type="button"
           >
-            <img
+            <span class="food-frame"><img
               alt="Hamburguesa con papas servido en Café Petropolys"
               decoding="async"
               height="760"
               loading="lazy"
               src="assets/platillo-hamburguesa-papas.webp"
               width="427"
-            /><span class="food-caption"
+            /></span><span class="food-caption"
               ><span>Ampliar <span aria-hidden="true">↗</span></span></span
             >
           </button>
@@ -509,14 +553,14 @@
             data-title="Café Petropolys"
             type="button"
           >
-            <img
+            <span class="food-frame"><img
               alt="Fajitas con espagueti servido en Café Petropolys"
               decoding="async"
               height="760"
               loading="lazy"
               src="assets/platillo-fajitas-espagueti.webp"
               width="427"
-            /><span class="food-caption"
+            /></span><span class="food-caption"
               ><span>Ampliar <span aria-hidden="true">↗</span></span></span
             >
           </button>
@@ -528,14 +572,14 @@
             data-title="Café Petropolys"
             type="button"
           >
-            <img
+            <span class="food-frame"><img
               alt="Pollo en salsa verde servido en Café Petropolys"
               decoding="async"
               height="760"
               loading="lazy"
               src="assets/platillo-pollo-salsa-verde.webp"
               width="427"
-            /><span class="food-caption"
+            /></span><span class="food-caption"
               ><span>Ampliar <span aria-hidden="true">↗</span></span></span
             >
           </button>
@@ -547,14 +591,14 @@
             data-title="Café Petropolys"
             type="button"
           >
-            <img
+            <span class="food-frame"><img
               alt="Pollo crujiente servido en Café Petropolys"
               decoding="async"
               height="760"
               loading="lazy"
               src="assets/platillo-pollo-crujiente.webp"
               width="427"
-            /><span class="food-caption"
+            /></span><span class="food-caption"
               ><span>Ampliar <span aria-hidden="true">↗</span></span></span
             >
           </button>

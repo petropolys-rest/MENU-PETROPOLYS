@@ -68,3 +68,13 @@ Pruebas actuales en Chromium: diseño sin desbordamiento de página ni de los bl
 - Nosotros muestra las cuatro fotografías reales del interior proporcionadas. Se conservaron los JPG sin modificaciones y se generaron copias WebP más ligeras para la página. El collage adapta su composición a cada pantalla y permite abrir las cuatro fotos completas en el visor existente.
 
 Verificado en Chromium a 320, 390, 600, 768, 1024 y 1440 px, sin desbordamientos. Se revisaron las secciones modificadas y los enlaces internos; las nuevas fotos y sus originales cargan correctamente. Se comprobó la secuencia de cuatro imágenes, navegación circular, zoom, cierre y devolución del foco, además de apertura, navegación y zoom táctiles en móvil. Sin errores JavaScript. Los assets de la entrega anterior permanecen intactos.
+
+## Actualización — 9 de octubre de 2026 (video de portada y animaciones)
+
+| Comprobación | Resultado |
+| --- | --- |
+| Video de portada en Chromium (escritorio 1440 px y móvil 390 px) | Se reproduce en bucle; carga la versión móvil en pantallas de hasta 600 px |
+| Bucle del video | Diferencia media entre el último y el primer fotograma: 1.5/255 (sin salto visible) |
+| Secuencia de entrada, revelados al desplazarse y hover en tarjetas | Correctos, sin errores en consola |
+| Movimiento reducido | Sin animaciones, video en pausa y todo el contenido visible |
+| Visor de imágenes, flechas del teclado y menú móvil | Funcionan como antes |

@@ -434,3 +434,272 @@ lightbox.addEventListener("keydown", (event) => {
     actions[event.key]();
   }
 });
+
+// ---------------------------------------------------------------------------
+// Video de portada y capa de movimiento.
+// El video se comporta como un GIF (silencioso y en bucle), pero pesa mucho
+// menos. Se pausa fuera de pantalla, en pestañas ocultas y con movimiento
+// reducido. Las animaciones solo se activan si <html> tiene la clase .motion.
+// ---------------------------------------------------------------------------
+(() => {
+  const root = document.documentElement;
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  const hero = document.querySelector(".hero");
+  const video = document.querySelector(".hero-video");
+  const motion = root.classList.contains("motion");
+  const hasIO = "IntersectionObserver" in window;
+
+  // --- Video en bucle de la portada ---
+  if (video) {
+    video.muted = true;
+    let heroVisible = true;
+    const play = () => {
+      if (reduceMotion.matches || document.hidden || !heroVisible) return;
+      const attempt = video.play();
+      if (attempt && attempt.catch) attempt.catch(() => {});
+    };
+    const syncPreference = () => (reduceMotion.matches ? video.pause() : play());
+    if (hasIO) {
+      new IntersectionObserver(([entry]) => {
+        heroVisible = entry.isIntersecting;
+        heroVisible ? play() : video.pause();
+      }).observe(hero);
+    }
+    document.addEventListener("visibilitychange", () =>
+      document.hidden ? video.pause() : play(),
+    );
+    if (reduceMotion.addEventListener)
+      reduceMotion.addEventListener("change", syncPreference);
+    syncPreference();
+  }
+
+  // --- Progreso de lectura, encabezado y parallax de la portada ---
+  const progress = document.querySelector(".scroll-progress");
+  const siteHeader = document.querySelector(".site-header");
+  let frameQueued = false;
+  function onScrollFrame() {
+    frameQueued = false;
+    const y = window.scrollY;
+    const max = root.scrollHeight - window.innerHeight;
+    if (progress)
+      progress.style.setProperty("--scroll", max > 0 ? (y / max).toFixed(4) : "0");
+    siteHeader.classList.toggle("is-scrolled", y > 12);
+    if (motion && hero) {
+      const height = hero.offsetHeight || 1;
+      const p = Math.min(1, Math.max(0, y / height));
+      hero.style.setProperty("--hero-shift", `${(p * height * 0.35).toFixed(1)}px`);
+      hero.style.setProperty("--hero-fade", Math.max(0, 1 - p * 1.4).toFixed(3));
+      hero.style.setProperty("--hero-lift", `${(-p * 80).toFixed(1)}px`);
+    }
+  }
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!frameQueued) {
+        frameQueued = true;
+        requestAnimationFrame(onScrollFrame);
+      }
+    },
+    { passive: true },
+  );
+  window.addEventListener("resize", onScrollFrame);
+  onScrollFrame();
+
+  // Las estrellas se vuelven elementos individuales para animarlas una a una.
+  document.querySelectorAll(".review-premium-stars").forEach((el) => {
+    const count = [...el.textContent.trim()].length;
+    el.setAttribute("role", "img");
+    el.textContent = "";
+    for (let i = 0; i < count; i += 1) {
+      const star = document.createElement("span");
+      star.className = "star";
+      star.setAttribute("aria-hidden", "true");
+      star.textContent = "★";
+      star.style.setProperty("--s", i);
+      el.append(star);
+    }
+  });
+
+  if (!motion || !hasIO) return;
+
+  const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  // --- Profundidad sutil del video al mover el mouse sobre la portada ---
+  if (fine && video && hero) {
+    video.style.scale = "1.04";
+    hero.addEventListener("pointermove", (event) => {
+      const rect = hero.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      video.style.setProperty("--px", `${(-x * 22).toFixed(1)}px`);
+      video.style.setProperty("--py", `${(-y * 14).toFixed(1)}px`);
+    });
+    hero.addEventListener("pointerleave", () => {
+      video.style.setProperty("--px", "0px");
+      video.style.setProperty("--py", "0px");
+    });
+  }
+
+  // --- Titulares palabra por palabra (conserva <em>, <span> y <br>) ---
+  function splitWords(el) {
+    let index = 0;
+    const walk = (node) => {
+      [...node.childNodes].forEach((child) => {
+        if (child.nodeType === Node.TEXT_NODE) {
+          const fragment = document.createDocumentFragment();
+          child.textContent.split(/(\s+)/).forEach((part) => {
+            if (!part) return;
+            if (/^\s+$/.test(part)) {
+              fragment.append(part);
+              return;
+            }
+            const word = document.createElement("span");
+            const inner = document.createElement("span");
+            word.className = "w";
+            inner.textContent = part;
+            inner.style.setProperty("--w", index);
+            index += 1;
+            word.append(inner);
+            fragment.append(word);
+          });
+          child.replaceWith(fragment);
+        } else if (child.nodeType === Node.ELEMENT_NODE && child.tagName !== "BR") {
+          walk(child);
+        }
+      });
+    };
+    walk(el);
+  }
+
+  const assign = (selector, type) =>
+    document.querySelectorAll(selector).forEach((el) => {
+      if (!el.dataset.reveal) el.dataset.reveal = type;
+    });
+
+  document
+    .querySelectorAll(
+      ".section-heading h2, .about-premium-copy h2, .order-copy h2, .reviews-premium-head h2, .visit-copy h2, .gallery-invitation h3, .fresh-drinks-title h3, .parking-feature h3",
+    )
+    .forEach((el) => {
+      splitWords(el);
+      el.dataset.reveal = "words";
+    });
+  assign(
+    ".eyebrow:not(.hero-eyebrow), .about-premium-kicker, .reviews-premium-kicker",
+    "track",
+  );
+  assign(".food-frame, .about-collage__item", "clip");
+  assign(".about-collage__seal", "stamp");
+  assign(".fresh-drinks, .visit-map, .parking-guide", "zoom");
+  assign(
+    [
+      ".heading-bottom",
+      ".menu-item",
+      ".food-caption",
+      ".gallery-invitation p",
+      ".gallery-invitation .btn",
+      ".about-premium-text",
+      ".about-premium-cta",
+      ".order-copy > p",
+      ".order-live",
+      ".order-card",
+      ".payment-services p",
+      ".reviews-premium-head > p",
+      ".reviews-google-link",
+      ".review-premium-card",
+      ".review-snapshot",
+      ".visit-copy address",
+      ".visit-actions",
+      ".social-links a",
+      ".parking-feature-copy > p",
+      ".parking-details-gallery .parking-photo",
+      ".footer-grid > *",
+    ].join(", "),
+    "up",
+  );
+  document
+    .querySelectorAll(".fresh-drinks-flavors li")
+    .forEach((li, i) => li.style.setProperty("--i", i));
+
+  // Los elementos que entran juntos se escalonan; al terminar se libera el
+  // atributo para que sus propias transiciones de hover vuelvan a funcionar.
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries
+        .filter((entry) => entry.isIntersecting)
+        .map((entry) => entry.target)
+        .sort((a, b) => {
+          const ra = a.getBoundingClientRect(),
+            rb = b.getBoundingClientRect();
+          return ra.top - rb.top || ra.left - rb.left;
+        })
+        .forEach((el, i) => {
+          const delay = Math.min(i, 7) * 90;
+          el.style.setProperty("--d", `${delay}ms`);
+          el.classList.add("is-in");
+          revealObserver.unobserve(el);
+          setTimeout(() => {
+            el.removeAttribute("data-reveal");
+            el.classList.remove("is-in");
+            el.style.removeProperty("--d");
+          }, delay + 2600);
+        });
+    },
+    { rootMargin: "0px 0px -10% 0px", threshold: 0.12 },
+  );
+  document
+    .querySelectorAll("[data-reveal]")
+    .forEach((el) => revealObserver.observe(el));
+
+  // --- Inclinación 3D y reflejo en tarjetas (solo mouse) ---
+  if (fine) {
+    document
+      .querySelectorAll(".menu-item > button, .food-frame")
+      .forEach((el) => {
+        el.addEventListener("pointermove", (event) => {
+          const rect = el.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width;
+          const y = (event.clientY - rect.top) / rect.height;
+          el.style.setProperty("--rx", `${((0.5 - y) * 7).toFixed(2)}deg`);
+          el.style.setProperty("--ry", `${((x - 0.5) * 9).toFixed(2)}deg`);
+          el.style.setProperty("--mx", `${(x * 100).toFixed(1)}%`);
+          el.style.setProperty("--my", `${(y * 100).toFixed(1)}%`);
+        });
+        el.addEventListener("pointerleave", () => {
+          el.style.setProperty("--rx", "0deg");
+          el.style.setProperty("--ry", "0deg");
+        });
+      });
+  }
+
+  // --- La cinta acelera con el scroll y cambia de sentido al subir ---
+  const marquee = document.querySelector(".marquee");
+  const track = document.querySelector(".marquee-track");
+  const marqueeAnimation =
+    track && track.getAnimations ? track.getAnimations()[0] : null;
+  if (marquee && marqueeAnimation) {
+    let rate = 1,
+      direction = 1,
+      lastY = window.scrollY,
+      running = false;
+    const tick = () => {
+      if (!running) return;
+      const y = window.scrollY,
+        dy = y - lastY;
+      lastY = y;
+      if (dy) direction = dy > 0 ? 1 : -1;
+      const target = direction * (1 + Math.min(Math.abs(dy) / 6, 5));
+      rate += (target - rate) * 0.1;
+      marqueeAnimation.playbackRate = rate;
+      requestAnimationFrame(tick);
+    };
+    new IntersectionObserver(([entry]) => {
+      const wasRunning = running;
+      running = entry.isIntersecting;
+      if (running && !wasRunning) {
+        lastY = window.scrollY;
+        requestAnimationFrame(tick);
+      }
+    }).observe(marquee);
+  }
+})();
