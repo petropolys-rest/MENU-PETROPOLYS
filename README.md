@@ -81,3 +81,13 @@ Nosotros incluye las cuatro fotos del interior compartidas el 5 de octubre, con 
 - Al desplazarse: barra de progreso, encabezado translúcido, parallax y desvanecimiento de la portada, titulares palabra por palabra y revelado escalonado de tarjetas, fotos, estrellas y sabores.
 - Cinta naranja continua bajo la portada que acelera con el scroll y cambia de sentido al subir.
 - Detalles al pasar el mouse: inclinación 3D con reflejo en menús y platillos, destello en botones, anillo pulsante en WhatsApp, latido en el turno disponible y entrada animada del visor y del menú móvil.
+
+## Productos y catálogo (v29)
+
+- Nueva sección **Productos** entre Pedidos y Reseñas, con su enlace en el menú de navegación.
+- El catálogo **solo se visualiza**: no hay botón de descarga y el PDF no se sube al sitio. **Ver catálogo** abre sus páginas como imágenes (`assets/catalogo/pagina-01.webp` a `pagina-27.webp`) en el visor existente, con zoom, deslizamiento y flechas del teclado. En el visor se desactiva el menú de “Guardar imagen”.
+- No se muestran cifras de productos, categorías ni páginas. Cada categoría tiene una descripción breve y abre el visor directamente en su sección.
+- Las 27 fotos de las tiras (`assets/productos/`) abren la página del catálogo donde aparece cada producto.
+- Animaciones: catálogo en 3D que flota, se abre al pasar el mouse y despliega sus hojas al aparecer; titular palabra por palabra; categorías que se rellenan de amarillo; dos tiras de productos en sentidos opuestos que se pausan al pasar el mouse.
+- Con «Reducir movimiento», las tiras se convierten en carruseles que se desplazan a mano.
+- Para actualizar el catálogo, exporta cada página del nuevo PDF como imagen y reemplaza los archivos de `assets/catalogo/` con los mismos nombres. Si cambia el número de páginas, agrega o quita las entradas ocultas al inicio de la sección en `index.html`.

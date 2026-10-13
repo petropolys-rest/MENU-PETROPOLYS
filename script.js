@@ -232,6 +232,7 @@ function openGallery(button) {
       return true;
     })
     .map((node) => ({ src: node.dataset.open, title: node.dataset.title }));
+  lightbox.dataset.gallery = button.dataset.gallery;
   lightbox.showModal();
   document.body.classList.add("modal-open");
   renderLightbox(items.findIndex((item) => item.src === button.dataset.open));
@@ -282,6 +283,10 @@ bindViewerControl(document.getElementById("zoomOut"), () =>
   applyZoom(zoom - 0.5),
 );
 bindViewerControl(document.getElementById("zoomReset"), resetZoom);
+// El catálogo solo se visualiza: sin menú contextual para guardar la página.
+image.addEventListener("contextmenu", (event) => {
+  if (lightbox.dataset.gallery === "catalogo") event.preventDefault();
+});
 lightbox.addEventListener("close", () => {
   document.body.classList.remove("modal-open");
   clearGesture();
@@ -578,7 +583,7 @@ lightbox.addEventListener("keydown", (event) => {
 
   document
     .querySelectorAll(
-      ".section-heading h2, .about-premium-copy h2, .order-copy h2, .reviews-premium-head h2, .visit-copy h2, .gallery-invitation h3, .fresh-drinks-title h3, .parking-feature h3",
+      ".section-heading h2, .about-premium-copy h2, .products-copy h2, .order-copy h2, .reviews-premium-head h2, .visit-copy h2, .gallery-invitation h3, .fresh-drinks-title h3, .parking-feature h3",
     )
     .forEach((el) => {
       splitWords(el);
@@ -590,6 +595,8 @@ lightbox.addEventListener("keydown", (event) => {
   );
   assign(".food-frame, .about-collage__item", "clip");
   assign(".about-collage__seal", "stamp");
+  assign(".catalog-book-wrap", "book");
+  assign(".product-strips", "zoom");
   assign(".fresh-drinks, .visit-map, .parking-guide", "zoom");
   assign(
     [
@@ -613,6 +620,9 @@ lightbox.addEventListener("keydown", (event) => {
       ".social-links a",
       ".parking-feature-copy > p",
       ".parking-details-gallery .parking-photo",
+      ".products-lead",
+      ".products-actions",
+      ".catalog-category",
       ".footer-grid > *",
     ].join(", "),
     "up",
@@ -654,7 +664,7 @@ lightbox.addEventListener("keydown", (event) => {
   // --- Inclinación 3D y reflejo en tarjetas (solo mouse) ---
   if (fine) {
     document
-      .querySelectorAll(".menu-item > button, .food-frame")
+      .querySelectorAll(".menu-item > button, .food-frame, .catalog-book")
       .forEach((el) => {
         el.addEventListener("pointermove", (event) => {
           const rect = el.getBoundingClientRect();

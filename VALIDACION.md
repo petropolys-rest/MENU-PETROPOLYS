@@ -78,3 +78,13 @@ Verificado en Chromium a 320, 390, 600, 768, 1024 y 1440 px, sin desbordamientos
 | Secuencia de entrada, revelados al desplazarse y hover en tarjetas | Correctos, sin errores en consola |
 | Movimiento reducido | Sin animaciones, video en pausa y todo el contenido visible |
 | Visor de imágenes, flechas del teclado y menú móvil | Funcionan como antes |
+
+## Actualización — 13 de octubre de 2026 (sección Productos)
+
+| Comprobación | Resultado |
+| --- | --- |
+| Sección Productos en escritorio (1440 px y 1120 px) y móvil (390 px) | Correcta, sin errores en consola; el menú cabe con el nuevo enlace |
+| Visor del catálogo desde categorías, portada y productos | Abre en la página correcta de cada sección |
+| Solo visualización | Sin botones ni enlaces de descarga; el PDF no está en el sitio |
+| Cifras de productos, categorías y páginas | Retiradas de la sección |
+| Movimiento reducido | Tiras desplazables a mano, sin duplicados visibles |
