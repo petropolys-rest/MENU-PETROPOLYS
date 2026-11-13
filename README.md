@@ -74,7 +74,7 @@ Nosotros incluye las cuatro fotos del interior compartidas el 5 de octubre, con 
 
 ## Video de portada y animaciones
 
-- La portada usa el video del 7 de octubre como fondo en bucle, silencioso y sin controles, con el mismo comportamiento que un GIF. Pesa mucho menos y conserva mejor la calidad: `assets/portada-video.webm` / `.mp4` en 1080p para escritorio y `assets/portada-video-movil.webm` / `.mp4` en 480p para celulares. Se recortó el audio y se fundió el final con el inicio para que el bucle no muestre un salto.
+- La portada usa el video del 10 de noviembre (reemplaza al de Halloween) como fondo en bucle, silencioso y sin controles, con el mismo comportamiento que un GIF. Pesa mucho menos y conserva mejor la calidad: `assets/portada-video.webm` / `.mp4` en 1080p para escritorio y `assets/portada-video-movil.webm` / `.mp4` en 480p para celulares. Se recortó el audio y se fundió el final con el inicio para que el bucle no muestre un salto.
 - `assets/portada-video-poster.webp` se muestra mientras carga el video. Si el celular bloquea la reproducción automática (por ejemplo, con el ahorro de batería), aparece esa imagen.
 - El video se pausa fuera de pantalla y en pestañas ocultas. Con «Reducir movimiento» activado en el sistema no se reproduce y todas las animaciones se desactivan.
 - Entrada de la portada: telón oscuro, zoom lento del video, titular revelado por líneas, subrayado naranja en “Petropolys.” y tarjeta 24/7 con desenfoque.
@@ -84,10 +84,14 @@ Nosotros incluye las cuatro fotos del interior compartidas el 5 de octubre, con 
 
 ## Productos y catálogo (v29)
 
-- Nueva sección **Productos** entre Pedidos y Reseñas, con su enlace en el menú de navegación.
-- El catálogo **solo se visualiza**: no hay botón de descarga y el PDF no se sube al sitio. **Ver catálogo** abre sus páginas como imágenes (`assets/catalogo/pagina-01.webp` a `pagina-27.webp`) en el visor existente, con zoom, deslizamiento y flechas del teclado. En el visor se desactiva el menú de “Guardar imagen”.
-- No se muestran cifras de productos, categorías ni páginas. Cada categoría tiene una descripción breve y abre el visor directamente en su sección.
-- Las 27 fotos de las tiras (`assets/productos/`) abren la página del catálogo donde aparece cada producto.
-- Animaciones: catálogo en 3D que flota, se abre al pasar el mouse y despliega sus hojas al aparecer; titular palabra por palabra; categorías que se rellenan de amarillo; dos tiras de productos en sentidos opuestos que se pausan al pasar el mouse.
-- Con «Reducir movimiento», las tiras se convierten en carruseles que se desplazan a mano.
-- Para actualizar el catálogo, exporta cada página del nuevo PDF como imagen y reemplaza los archivos de `assets/catalogo/` con los mismos nombres. Si cambia el número de páginas, agrega o quita las entradas ocultas al inicio de la sección en `index.html`.
+- Sección **Productos** entre Pedidos y Reseñas, con enlace en el menú. El catálogo **solo se visualiza**: sus 27 páginas están como imágenes en `assets/catalogo/` y se abren en el visor; no hay descarga ni PDF en el sitio.
+- Categorías con descripción breve (sin cifras) y dos tiras de productos (`assets/productos/`) que abren la página donde aparece cada uno.
+
+## Pedido en línea con carrito (v30)
+
+- Nueva sección **Arma tu pedido** (`#ordenar`) justo después del menú. El botón “Pedir ahora” del encabezado y el enlace “Arma tu pedido” del menú llevan ahí. El botón flotante verde de WhatsApp sigue abriendo el chat directo.
+- Los platillos y precios están en `pedido.js` (constante `MENU`), transcritos de las cartas de `assets/menu-*`. **Para cambiar un precio, un platillo o una opción, edita solo ese archivo.**
+- Cada platillo se agrega con un toque; los que tienen opciones (guiso, sabor de agua, fruta, BBQ/Hawaiana) abren una ventana para elegir, escribir una nota y la cantidad.
+- El carrito guarda el pedido en el navegador del cliente, permite cambiar cantidades y pide nombre, forma de entrega (recoger o domicilio con dirección), forma de pago y notas.
+- “Enviar pedido por WhatsApp” abre WhatsApp con el pedido ya escrito y lo dirige al turno disponible según la hora de Mérida (día: 999 224 9678, noche: 999 546 3816). El cliente solo toca enviar.
+- Animaciones: pestañas con indicador deslizante, tarjetas que entran escalonadas, punto naranja que vuela al carrito, contador que rebota y cajón lateral. Con “Reducir movimiento” todo funciona sin animaciones.

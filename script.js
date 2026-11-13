@@ -83,7 +83,7 @@ document.addEventListener("keydown", (event) => {
     menuToggle.focus();
   }
 });
-const navLinks = [...topNav.querySelectorAll('a[href^="#"]')];
+const navLinks = [...topNav.querySelectorAll('a[href^="#"]:not(.nav-order)')];
 let ticking = false;
 function updateActiveNav() {
   const marker = header.getBoundingClientRect().height + 110;
@@ -583,7 +583,7 @@ lightbox.addEventListener("keydown", (event) => {
 
   document
     .querySelectorAll(
-      ".section-heading h2, .about-premium-copy h2, .products-copy h2, .order-copy h2, .reviews-premium-head h2, .visit-copy h2, .gallery-invitation h3, .fresh-drinks-title h3, .parking-feature h3",
+      ".section-heading h2, .about-premium-copy h2, .products-copy h2, .order-online__head h2, .order-copy h2, .reviews-premium-head h2, .visit-copy h2, .gallery-invitation h3, .fresh-drinks-title h3, .parking-feature h3",
     )
     .forEach((el) => {
       splitWords(el);
@@ -620,6 +620,8 @@ lightbox.addEventListener("keydown", (event) => {
       ".social-links a",
       ".parking-feature-copy > p",
       ".parking-details-gallery .parking-photo",
+      ".order-online__intro",
+      ".menu-tabs",
       ".products-lead",
       ".products-actions",
       ".catalog-category",

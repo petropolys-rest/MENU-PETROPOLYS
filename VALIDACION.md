@@ -79,12 +79,14 @@ Verificado en Chromium a 320, 390, 600, 768, 1024 y 1440 px, sin desbordamientos
 | Movimiento reducido | Sin animaciones, video en pausa y todo el contenido visible |
 | Visor de imágenes, flechas del teclado y menú móvil | Funcionan como antes |
 
-## Actualización — 13 de octubre de 2026 (sección Productos)
+## Actualización — 12 de noviembre de 2026 (v30: portada nueva y carrito)
 
 | Comprobación | Resultado |
 | --- | --- |
-| Sección Productos en escritorio (1440 px y 1120 px) y móvil (390 px) | Correcta, sin errores en consola; el menú cabe con el nuevo enlace |
-| Visor del catálogo desde categorías, portada y productos | Abre en la página correcta de cada sección |
-| Solo visualización | Sin botones ni enlaces de descarga; el PDF no está en el sitio |
-| Cifras de productos, categorías y páginas | Retiradas de la sección |
-| Movimiento reducido | Tiras desplazables a mano, sin duplicados visibles |
+| Video nuevo de portada (escritorio y móvil) | Se reproduce en bucle sin salto visible (diferencia media 2/255 entre último y primer fotograma) |
+| Carrito: agregar, opciones, notas, cantidades, quitar | Correcto en 1440 px y 390 px, sin errores en consola |
+| Mensaje de WhatsApp | Lista de platillos con opciones y notas, subtotales, total, nombre, entrega, dirección y pago; se dirige al turno disponible |
+| Ejemplo comprobado | 2 Tampiqueñas ($380) + 2 Chilaquiles con pollo y fruta ($330) = $710 |
+| Carrito al recargar la página | Se conserva |
+| Movimiento reducido | Pestañas, tarjetas y carrito funcionan sin animaciones; video en pausa |
+| Sección Productos y visor del catálogo | Sin cambios respecto a la v29 |
